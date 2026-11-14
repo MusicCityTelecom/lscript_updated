@@ -4,7 +4,7 @@ A maintained revival of the LAZY script for **Kali Linux, Debian and Ubuntu**,
 with an English terminal interface, a shared tool catalog, reverse-engineering
 profiles, and integration with an existing `pentest-menu` installation.
 
-**Version 3.0.0:** 338 canonical catalog entries and 83 installation recipes.
+**Version 3.0.1:** 338 canonical catalog entries and 83 installation recipes.
 These numbers describe the catalog, not bundled binaries or a claim that every
 legacy project works on current distributions. Tools are installed on demand.
 
@@ -74,10 +74,16 @@ lazy plan-profile reverse-core
 lazy install-profile reverse-core
 ```
 
-The main menu shows 12 entries per page. Use `n`/`p` for pages, `s TERM` to search,
-`c TERM` to filter by category, `a` to clear filters, and a displayed number for
-tool actions. Every legacy entry remains searchable even if it has no current
-installation recipe.
+The main menu lists **all catalog entries by default**, including missing tools
+and source repositories, with installation status beside each item. Select a
+number or tool ID to open its actions. A missing tool with a recipe offers
+**Install** immediately; entries without recipes show their repository and
+compatibility details rather than pretending installation is supported.
+
+Use `install ID` or `install NUMBER` to install directly from the main prompt.
+Use `paged` for an optional 12-entry view, `all` for the complete list, `n`/`p`
+for pages, `s TERM` to search, `c TERM` to filter by category, and `a` to reset
+all filters. Tool numbers remain consistent across pages of the current list.
 
 | Status | Meaning |
 |---|---|

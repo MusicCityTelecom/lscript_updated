@@ -13,12 +13,58 @@ import unittest
 from unittest.mock import patch
 import zipfile
 
-from lazytoolkit import core, installers, integration, bridge, workflows
+from lazytoolkit import core, installers, integration, bridge, workflows, cli
 from lazytoolkit.pentest_patch import patch_menu
 from lazytoolkit.profiles import PROFILES
 
 
 class ToolkitTests(unittest.TestCase):
+    def menu_records(self):
+        return [dict(id=f'fixture{i}',name=f'Fixture Tool {i}',categories=[],repositories=[])
+                for i in range(1,16)]
+
+    def test_interactive_default_lists_all_tools_including_missing(self):
+        output=io.StringIO()
+        with contextlib.redirect_stdout(output),patch.object(cli,'filtered',return_value=self.menu_records()), \
+             patch.object(cli,'status',return_value='installable'),patch('builtins.input',return_value='q'):
+            cli.interactive()
+        self.assertIn('full catalog',output.getvalue())
+        self.assertIn('Fixture Tool 15',output.getvalue())
+        self.assertIn('[installable]',output.getvalue())
+
+    def test_missing_tool_offers_install_and_installs_without_execution(self):
+        record=dict(id='fixture',name='Fixture',recipe={'kind':'apt','packages':['fixture']})
+        output=io.StringIO()
+        with contextlib.redirect_stdout(output),patch.object(cli,'display_info'), \
+             patch.object(cli,'status',return_value='installable'),patch.object(cli,'install') as install, \
+             patch.object(cli,'execute') as execute,patch('builtins.input',side_effect=['1','0']):
+            cli.action_menu(record)
+        self.assertIn('Choose 1 to install',output.getvalue())
+        install.assert_called_once_with(record)
+        execute.assert_not_called()
+
+    def test_missing_repository_without_recipe_keeps_details_available(self):
+        record=dict(id='fixture',name='Fixture',repositories=['https://github.com/example/project'])
+        with patch.object(cli,'display_info') as info,patch.object(cli,'status',return_value='review-needed'), \
+             patch.object(cli,'install') as install,patch('builtins.input',side_effect=['1','0']):
+            cli.action_menu(record)
+        self.assertGreaterEqual(info.call_count,2)
+        install.assert_not_called()
+
+    def test_paged_numbers_select_from_the_full_filtered_list(self):
+        records=self.menu_records()
+        with patch.object(cli,'filtered',return_value=records),patch.object(cli,'status',return_value='installable'), \
+             patch.object(cli,'action_menu') as menu,patch('builtins.input',side_effect=['paged','n','14','q']):
+            cli.interactive()
+        menu.assert_called_once_with(records[13])
+
+    def test_main_prompt_install_by_number(self):
+        records=self.menu_records(); records[14]['recipe']={'kind':'apt','packages':['fixture']}
+        with patch.object(cli,'filtered',return_value=records),patch.object(cli,'status',return_value='installable'), \
+             patch.object(cli,'install') as install,patch('builtins.input',side_effect=['install 15','q']):
+            cli.interactive()
+        install.assert_called_once_with(records[14])
+
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory(); self.root=Path(self.temp.name)
         self.stack=contextlib.ExitStack()
@@ -235,7 +281,8 @@ class ToolkitTests(unittest.TestCase):
         commands=[line.split()[-1] for line in lines if line.strip()]
         canonical=[bridge.key_for(command) for command in commands]
         self.assertEqual(len(canonical),len(set(canonical)))
-        self.assertEqual(len(canonical),len(core.load_catalog()['records']))
+        # Real user registry entries may legitimately add tools beyond the built-in catalog.
+        self.assertTrue({record['id'] for record in core.load_catalog()['records']}.issubset(set(canonical)))
 
 
 if __name__=='__main__': unittest.main()

@@ -58,11 +58,26 @@ def sources(suite):
 def action_menu(record):
     while True:
         display_info(record)
-        print('\n1 Run  2 Install  3 Installation plan  4 Documentation / source variants  0 Back')
+        installed = status(record) == 'installed'
+        if installed:
+            print('\n1 Run  2 Check installation  3 Installation plan  4 Documentation / source variants  0 Back')
+        elif record.get('recipe'):
+            print('\nNot installed. Choose 1 to install this tool.')
+            print('1 Install  2 Install  3 Installation plan  4 Documentation / source variants  0 Back')
+        else:
+            print('\nNot installed. No automated installation recipe is available for this entry.')
+            print('1 Repository / installation details  2 Installation details  3 Installation plan  4 Documentation / source variants  0 Back')
         choice=input('Action: ').strip()
         if choice in ('0','q',''): return
         try:
-            if choice=='1':
+            if choice in ('1','2') and not installed:
+                if record.get('recipe'):
+                    install(record)
+                    if status(record) == 'installed':
+                        print('Installation complete. Choose Run to launch the tool.')
+                else:
+                    display_info(record)
+            elif choice=='1':
                 arguments=shlex.split(input('Arguments (quotes supported; Enter for none): '))
                 execute(record,arguments)
             elif choice=='2': install(record)
@@ -75,30 +90,48 @@ def action_menu(record):
 def interactive():
     page,query,category,only_installed=0,'',None,False
     size=12
+    paged=False
     while True:
         records=filtered(query,category,installed=only_installed)
         pages=max(1,(len(records)+size-1)//size); page=min(page,pages-1)
-        shown=records[page*size:(page+1)*size]
-        print(f'\nLScript Updated {__version__} — {len(records)} tools | page {page+1}/{pages}')
+        offset=page*size if paged else 0
+        shown=records[offset:offset+size] if paged else records
+        view=f'page {page+1}/{pages}' if paged else 'full catalog'
+        print(f'\nLScript Updated {__version__} — {len(records)} tools | {view}')
         print('Search: '+(query or 'all')+' | category: '+(category or 'all'))
-        for index,record in enumerate(shown,1):
-            print(f" {index:>2}. {record['name']:<34} [{status(record)}]  {record['id']}")
-        print('\nNumber: tool actions | n/p: pages | s TERM: search | c TERM: category')
+        for index,record in enumerate(shown,offset+1):
+            print(f" {index:>3}. {record['name']:<34} [{status(record)}]  {record['id']}")
+        print('\nNumber or tool ID: run/install actions | install ID/NUMBER: install a selected tool')
+        print('s TERM: search | c TERM: category | all: full catalog | paged: 12 per page | n/p: pages')
         print('a: clear filters | installed: toggle | d: diagnostics | profiles | q: exit')
         answer=input('lazy> ').strip()
         if answer in ('q','exit'): return
-        if answer.isdecimal() and 1<=int(answer)<=len(shown): action_menu(shown[int(answer)-1])
-        elif answer=='n': page=min(page+1,pages-1)
-        elif answer=='p': page=max(page-1,0)
+        if answer.isdecimal() and 1<=int(answer)<=len(records): action_menu(records[int(answer)-1])
+        elif answer.startswith('install '):
+            selected=answer[8:].strip()
+            try:
+                if selected.isdecimal():
+                    if not 1<=int(selected)<=len(records): raise LazyError('Tool number is outside the displayed catalog.')
+                    record=records[int(selected)-1]
+                else: record=tool(selected)
+                if not record.get('recipe') and status(record) != 'installed': display_info(record)
+                else: install(record)
+            except (LazyError,ValueError,OSError) as exc: print(f'ERROR: {exc}')
+        elif answer=='all': paged,query,category,only_installed,page=False,'',None,False,0
+        elif answer=='paged': paged=True; page=0
+        elif answer=='n': page=min(page+1 if paged else 0,pages-1); paged=True
+        elif answer=='p': page=max(page-1,0); paged=True
         elif answer.startswith('s '): query=answer[2:].strip(); page=0
         elif answer.startswith('c '): category=answer[2:].strip(); page=0
-        elif answer=='a': query,category,page='',None,0
+        elif answer=='a': query,category,page,only_installed='',None,0,False
         elif answer=='installed': only_installed=not only_installed; page=0
         elif answer=='d': doctor()
         elif answer=='profiles':
             for name,ids in PROFILES.items(): print(name+': '+', '.join(ids))
             print('Use lazy plan-profile NAME, then lazy install-profile NAME when ready.')
-        elif answer: print('Select a displayed number or one of the commands.')
+        elif answer:
+            try: action_menu(tool(answer))
+            except LazyError: print('Select a tool number, tool ID, or one of the commands.')
 
 
 def parser():
