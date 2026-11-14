@@ -1,0 +1,286 @@
+<ruby>
+# Metasploit Interactive Workflow Wizard v1.0
+# Run: msfconsole -q -r /absolute/path/msf_wizard.rc
+require 'io/console'
+
+class MsfWorkflowWizard
+  class Cancel < StandardError; end
+
+  def initialize(driver, input = $stdin, output = $stdout)
+    @driver, @input, @output = driver, input, output
+  end
+
+  def say(text = '')
+    @output.puts(text)
+  end
+
+  def ask(prompt, default = nil, secret: false)
+    shown = secret && !default.nil? ? '[set]' : default
+    @output.print("#{prompt}#{shown.nil? ? '' : " [#{shown}]"}: ")
+    @output.flush
+    line = if secret && @input.tty?
+             @input.noecho(&:gets).tap { say }
+           else
+             @input.gets
+           end
+    raise Cancel, 'Input closed.' if line.nil?
+    value = line.chomp
+    raise Cancel, 'Wizard cancelled.' if value == ':quit'
+    value.empty? ? default : value
+  end
+
+  def yes?(prompt)
+    ask("#{prompt} (y/N)", 'n').to_s.downcase == 'y'
+  end
+
+  def mod
+    @driver.active_module
+  end
+
+  def command(text)
+    @driver.run_single(text)
+  end
+
+  # Call the dispatcher with separate arguments. Values are never interpolated
+  # into console command strings, so passwords/paths can contain punctuation.
+  def assign(name, value)
+    unless %w[TARGET ACTION PAYLOAD].include?(name)
+      mod.datastore[name] = value
+      return
+    end
+    core = @driver.dispatcher_stack.find { |d| d.respond_to?(:cmd_set) }
+    raise 'Metasploit core dispatcher was not found.' unless core
+    core.cmd_set(name, value.to_s)
+  end
+
+  def choose_module
+    loop do
+      query = ask('Search service/CVE, or enter full module path')
+      next if query.to_s.empty?
+      if query.match?(%r{\A(?:auxiliary|exploit|post)/[A-Za-z0-9_/]+\z})
+        path = query
+      else
+        # Search is passed as arguments to avoid command-string injection.
+        dispatcher = @driver.dispatcher_stack.find { |d| d.respond_to?(:cmd_search) }
+        raise 'Module search dispatcher was not found.' unless dispatcher
+        require 'shellwords'
+        begin
+          dispatcher.cmd_search(*Shellwords.split(query))
+        rescue ArgumentError => e
+          say("Invalid search: #{e.message}")
+          next
+        end
+        path = ask('Module number from search, or full module path (Enter searches again)')
+        next if path.to_s.empty?
+      end
+      unless path.match?(%r{\A(?:\d+|(?:auxiliary|exploit|post)/[A-Za-z0-9_/]+)\z})
+        say('Enter a search result number or a full auxiliary/exploit/post path.')
+        next
+      end
+      previous = mod
+      command("use #{path}")
+      return if mod && (mod != previous || mod.fullname == path)
+      say('Module did not load. Try a full module path.')
+    end
+  end
+
+  def choose_from(label, values, current)
+    return if values.empty?
+    say("\n#{label}:")
+    values.each_with_index { |value, i| say("  #{i}: #{value}") }
+    loop do
+      index = ask("Select #{label.downcase} number", current)
+      return index.to_i if index.to_s.match?(/\A\d+\z/) && index.to_i < values.length
+      say('Choose one of the listed numbers.')
+    end
+  end
+
+  def choose_structure
+    if mod.respond_to?(:actions) && mod.actions && !mod.actions.empty?
+      names = mod.actions.map(&:name)
+      current = mod.action && names.index(mod.action.name)
+      index = choose_from('Action', names, current || 0)
+      assign('ACTION', names[index])
+    end
+    return unless mod.type == 'exploit'
+    targets = mod.targets.map(&:name)
+    index = choose_from('Target', targets, mod.datastore['TARGET'] || 0)
+    assign('TARGET', index) unless index.nil?
+    return unless yes?('Select a payload now? Choose y for an exploitation run')
+    payloads = mod.compatible_payloads.map(&:first).sort
+    if payloads.empty?
+      say('No compatible payloads were returned for this target.')
+      return
+    end
+    loop do
+      filter = ask('Filter compatible payload names (Enter lists all)', '').to_s.downcase
+      matches = payloads.select { |name| name.downcase.include?(filter) }
+      if matches.empty?
+        say('No matches. Try another filter.')
+        next
+      end
+      current = matches.index(mod.datastore['PAYLOAD']) || 0
+      index = choose_from('Payload', matches, current)
+      assign('PAYLOAD', matches[index])
+      break
+    end
+  end
+
+  def payload
+    name = mod.datastore['PAYLOAD']
+    return unless mod.type == 'exploit' && name && !name.empty?
+    item = @driver.framework.payloads.create(name)
+    raise "Could not load payload #{name}" unless item
+    item.share_datastore(mod.datastore)
+    item
+  end
+
+  def options
+    entries = mod.options.to_a
+    p = payload
+    entries += p.options.to_a if p
+    entries.to_h
+  end
+
+  def applicable?(option)
+    return true unless defined?(Msf::OptCondition) && option.respond_to?(:conditions)
+    Msf::OptCondition.show_option(mod, option)
+  end
+
+  def sensitive?(name)
+    name.match?(/PASS|SECRET|TOKEN|APIKEY|API_KEY|PRIVATE_KEY/i)
+  end
+
+  def prompt_option(name, option)
+    say("\n#{name} (#{option.type}#{option.required? ? ', required' : ', optional'})")
+    say("  #{option.desc}")
+    say("  Choices: #{option.enums.join(', ')}") if option.respond_to?(:enums) && !option.enums.empty?
+    loop do
+      value = ask(name, mod.datastore[name], secret: sensitive?(name))
+      value = nil if value == ':clear'
+      if !option.valid?(value, datastore: mod.datastore)
+        say('Value is missing or invalid for this option.')
+        next
+      end
+      if value.nil?
+        mod.datastore[name] = nil
+      else
+        assign(name, value)
+      end
+      return if option.valid?(mod.datastore[name], datastore: mod.datastore)
+      say('Metasploit rejected the value. Try again.')
+    end
+  end
+
+  def configure
+    asked = {}
+    # Rebuild options after each answer so dependent/conditional options appear.
+    loop do
+      entry = options.find do |name, option|
+        !asked[name] && !%w[ACTION TARGET PAYLOAD].include?(name) &&
+          !option.evasion? && applicable?(option) &&
+          (option.required? || (!option.advanced? && @optional))
+      end
+      break unless entry
+      name, option = entry
+      prompt_option(name, option)
+      asked[name] = true
+    end
+  end
+
+  def review
+    say("\nModule: #{mod.fullname}")
+    say("Action: #{mod.action.name}") if mod.respond_to?(:action) && mod.action
+    say("Target: #{mod.target.name}") if mod.type == 'exploit' && mod.target
+    say("Payload: #{mod.datastore['PAYLOAD']}") if mod.type == 'exploit'
+    options.each do |name, option|
+      next unless applicable?(option)
+      next if option.evasion? || (option.advanced? && !option.required?)
+      value = mod.datastore[name]
+      next if value.nil?
+      say("  #{name} = #{sensitive?(name) ? '[hidden]' : value}")
+    end
+    say('Validation applies to the selected module; runtime-only prerequisites may still fail.')
+  end
+
+  def validate!
+    mod.options.validate(mod.datastore)
+    p = payload
+    p.options.validate(mod.datastore) if p
+  end
+
+  def edit
+    say('Editable options: ' + options.keys.sort.join(', '))
+    name = ask('Option name (Enter returns)').to_s.upcase
+    return if name.empty?
+    if %w[ACTION TARGET PAYLOAD].include?(name)
+      say('Use the target/action/payload menu to change this selection.')
+    elsif options.key?(name)
+      prompt_option(name, options[name])
+      configure
+    else
+      say('Unknown option.')
+    end
+  end
+
+  def run
+    say("\nMetasploit Workflow Wizard")
+    say('Enter keeps the displayed value. :clear clears an option; :quit returns to the console.')
+    say('Module checks can send active probes. Execution is a separate menu action.')
+    choose_module
+    command('info')
+    choose_structure
+    @optional = yes?('Also prompt for optional standard options')
+    configure
+    loop do
+      review
+      say("\n1 Check  2 Execute  3 Edit option  4 Target/action/payload  5 Sessions  6 Console")
+      choice = ask('Action', '1')
+      case choice
+      when '1', '2'
+        if choice == '1' && (!mod.respond_to?(:has_check?) || !mod.has_check?)
+          say('This module does not provide a check method. No test was sent.')
+          next
+        end
+        begin
+          validate!
+        rescue StandardError => e
+          say("Validation failed: #{e.message}")
+          say('Use Edit option to correct the values; no module was executed.')
+          next
+        end
+        if choice == '1'
+          command('check') if yes?('Send this module\'s check probes now')
+        else
+          say('Execute runs the selected module and may change the target.')
+          next unless yes?('Execute this configuration now')
+          background = yes?('Run as a background job')
+          command(background ? 'run -j' : 'run')
+        end
+      when '3'
+        edit
+        next
+      when '4'
+        choose_structure
+        configure
+        next
+      when '5'
+        command('sessions')
+        next
+      when '6'
+        break
+      else
+        say('Choose a listed action.')
+        next
+      end
+    end
+  rescue Cancel, Interrupt => e
+    say("\n#{e.message.empty? ? 'Wizard cancelled.' : e.message}")
+  rescue StandardError => e
+    say("Wizard stopped: #{e.class}: #{e.message}")
+    say('Your Metasploit console remains available.')
+  end
+end
+
+MsfWorkflowWizard.new(self).run unless ENV['MSF_WIZARD_TEST'] == '1'
+</ruby>

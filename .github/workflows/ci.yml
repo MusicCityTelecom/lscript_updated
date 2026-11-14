@@ -1,0 +1,31 @@
+name: Toolkit checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m unittest discover -s tests -v
+      - run: bash -n l install.sh uninstall.sh
+      - run: python tools/build_catalog.py && git diff --exit-code -- data/catalog.json
+  distributions:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        image: ['debian:12', 'ubuntu:24.04', 'kalilinux/kali-rolling:latest']
+    container: ${{ matrix.image }}
+    steps:
+      - run: apt-get update && apt-get install -y python3 bash git ca-certificates
+      - uses: actions/checkout@v4
+      - run: python3 -m unittest discover -s tests -v
+      - run: bash l --version && bash l list --search ghidra

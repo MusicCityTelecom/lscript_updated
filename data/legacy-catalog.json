@@ -1,0 +1,6468 @@
+{
+  "schema": 1,
+  "records": [
+    {
+      "id": "nmap",
+      "name": "Nmap",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "Nmap",
+          "command": "nmap",
+          "kind": "cli",
+          "description": "Network discovery, port scanning, service detection, NSE scripts"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "1",
+          "label": "Nmap"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "masscan",
+      "name": "Masscan",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "Masscan",
+          "command": "masscan",
+          "kind": "root",
+          "description": "High-speed TCP port scanner"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "2",
+          "label": "Masscan"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "zmap",
+      "name": "ZMap",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "ZMap",
+          "command": "zmap",
+          "kind": "root",
+          "description": "Internet-scale single-port scanner"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "3",
+          "label": "ZMap"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "rustscan",
+      "name": "RustScan",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "RustScan",
+          "command": "rustscan",
+          "kind": "cli",
+          "description": "Fast port discovery feeding Nmap"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "4",
+          "label": "RustScan"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "naabu",
+      "name": "Naabu",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "Naabu",
+          "command": "naabu",
+          "kind": "cli",
+          "description": "ProjectDiscovery fast port scanner"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "5",
+          "label": "Naabu"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "tcpdump",
+      "name": "tcpdump",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "tcpdump",
+          "command": "tcpdump",
+          "kind": "root",
+          "description": "Command-line packet capture and protocol inspection"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "6",
+          "label": "tcpdump"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "tshark",
+      "name": "TShark",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "TShark",
+          "command": "tshark",
+          "kind": "cli",
+          "description": "Wireshark command-line packet analyzer"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "7",
+          "label": "TShark"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "wireshark",
+      "name": "Wireshark",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "Wireshark",
+          "command": "wireshark",
+          "kind": "gui",
+          "description": "Graphical packet analyzer"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "8",
+          "label": "Wireshark"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "bettercap",
+      "name": "Bettercap",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "Bettercap",
+          "command": "bettercap",
+          "kind": "root",
+          "description": "Network/Wi-Fi/BLE reconnaissance and testing framework"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "9",
+          "label": "Bettercap"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "responder",
+      "name": "Responder",
+      "categories": [
+        "Network & Recon",
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "Responder",
+          "command": "responder",
+          "kind": "root",
+          "description": "LLMNR/NBT-NS/mDNS responder for authorized Windows network testing"
+        },
+        {
+          "category": "Active Directory",
+          "name": "Responder",
+          "command": "responder",
+          "kind": "root",
+          "description": "Windows name-resolution assessment framework"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "10",
+          "label": "Responder"
+        },
+        {
+          "suite": "pentest-menu",
+          "source_id": "48",
+          "label": "Responder"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "ligoloproxy",
+      "name": "Ligolo Proxy",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "Ligolo Proxy",
+          "command": "ligolo-proxy",
+          "kind": "cli",
+          "description": "Ligolo-ng pivoting proxy"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "11",
+          "label": "Ligolo Proxy"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "ligoloagent",
+      "name": "Ligolo Agent",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "Ligolo Agent",
+          "command": "ligolo-agent",
+          "kind": "cli",
+          "description": "Ligolo-ng agent"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "12",
+          "label": "Ligolo Agent"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "chisel",
+      "name": "Chisel",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "Chisel",
+          "command": "chisel",
+          "kind": "cli",
+          "description": "TCP/UDP tunneling over HTTP/WebSocket"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "13",
+          "label": "Chisel"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "snmpwalk",
+      "name": "SNMP Walk",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "SNMP Walk",
+          "command": "snmpwalk",
+          "kind": "cli",
+          "description": "SNMP enumeration"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "14",
+          "label": "SNMP Walk"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "smbclient",
+      "name": "SMB Client",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "SMB Client",
+          "command": "smbclient",
+          "kind": "cli",
+          "description": "SMB/CIFS client and enumeration"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "15",
+          "label": "SMB Client"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "ldapsearch",
+      "name": "LDAP Search",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "LDAP Search",
+          "command": "ldapsearch",
+          "kind": "cli",
+          "description": "LDAP query client"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "16",
+          "label": "LDAP Search"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "nuclei",
+      "name": "Nuclei",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "Nuclei",
+          "command": "nuclei",
+          "kind": "cli",
+          "description": "Template-driven vulnerability scanner"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "17",
+          "label": "Nuclei"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "httpx",
+      "name": "httpx",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "httpx",
+          "command": "httpx",
+          "kind": "cli",
+          "description": "HTTP service probing and metadata collection"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "18",
+          "label": "httpx"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "subfinder",
+      "name": "Subfinder",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "Subfinder",
+          "command": "subfinder",
+          "kind": "cli",
+          "description": "Passive subdomain discovery"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "19",
+          "label": "Subfinder"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "dnsx",
+      "name": "dnsx",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "dnsx",
+          "command": "dnsx",
+          "kind": "cli",
+          "description": "DNS toolkit and resolver"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "20",
+          "label": "dnsx"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "katana",
+      "name": "Katana",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "Katana",
+          "command": "katana",
+          "kind": "cli",
+          "description": "Web crawler and endpoint discovery"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "21",
+          "label": "Katana"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "ffuf",
+      "name": "ffuf",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "ffuf",
+          "command": "ffuf",
+          "kind": "cli",
+          "description": "Fast web fuzzer"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "22",
+          "label": "ffuf"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "gobuster",
+      "name": "Gobuster",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "Gobuster",
+          "command": "gobuster",
+          "kind": "cli",
+          "description": "Directory, DNS, vhost and bucket discovery"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "23",
+          "label": "Gobuster"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "feroxbuster",
+      "name": "Feroxbuster",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "Feroxbuster",
+          "command": "feroxbuster",
+          "kind": "cli",
+          "description": "Recursive content discovery"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "24",
+          "label": "Feroxbuster"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "sqlmap",
+      "name": "SQLMap",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "SQLMap",
+          "command": "sqlmap",
+          "kind": "cli",
+          "description": "Automated SQL injection testing"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "25",
+          "label": "SQLMap"
+        },
+        {
+          "suite": "LScript",
+          "source_id": "sqlmap",
+          "label": "sqlmap"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "commix",
+      "name": "Commix",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "Commix",
+          "command": "commix",
+          "kind": "cli",
+          "description": "Command injection testing framework"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "26",
+          "label": "Commix"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "xsstrike",
+      "name": "XSStrike",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "XSStrike",
+          "command": "xsstrike",
+          "kind": "cli",
+          "description": "XSS discovery and fuzzing"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "27",
+          "label": "XSStrike"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "jwttool",
+      "name": "JWT Tool",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "JWT Tool",
+          "command": "jwt_tool",
+          "kind": "cli",
+          "description": "JSON Web Token analysis and testing"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "28",
+          "label": "JWT Tool"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "dalfox",
+      "name": "Dalfox",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "Dalfox",
+          "command": "dalfox",
+          "kind": "cli",
+          "description": "XSS scanner and parameter analysis"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "29",
+          "label": "Dalfox"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "arjun",
+      "name": "Arjun",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "Arjun",
+          "command": "arjun",
+          "kind": "cli",
+          "description": "HTTP parameter discovery"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "30",
+          "label": "Arjun"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "wafw00f",
+      "name": "WAFW00F",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "WAFW00F",
+          "command": "wafw00f",
+          "kind": "cli",
+          "description": "Web application firewall fingerprinting"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "31",
+          "label": "WAFW00F"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "nikto",
+      "name": "Nikto",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "Nikto",
+          "command": "nikto",
+          "kind": "cli",
+          "description": "Web server security scanner"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "32",
+          "label": "Nikto"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "testsslsh",
+      "name": "testssl.sh",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "testssl.sh",
+          "command": "testssl.sh",
+          "kind": "cli",
+          "description": "TLS/SSL configuration scanner"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "33",
+          "label": "testssl.sh"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "zaproxy",
+      "name": "OWASP ZAP",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "OWASP ZAP",
+          "command": "zaproxy",
+          "kind": "gui",
+          "description": "Graphical web proxy and application security scanner"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "34",
+          "label": "OWASP ZAP"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "msfconsole",
+      "name": "Metasploit",
+      "categories": [
+        "Exploitation & Red Team"
+      ],
+      "bindings": [
+        {
+          "category": "Exploitation & Red Team",
+          "name": "Metasploit",
+          "command": "msfconsole",
+          "kind": "cli",
+          "description": "Exploit framework and auxiliary modules"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "35",
+          "label": "Metasploit"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "searchsploit",
+      "name": "SearchSploit",
+      "categories": [
+        "Exploitation & Red Team"
+      ],
+      "bindings": [
+        {
+          "category": "Exploitation & Red Team",
+          "name": "SearchSploit",
+          "command": "searchsploit",
+          "kind": "cli",
+          "description": "Search local Exploit-DB copy"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "36",
+          "label": "SearchSploit"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "sliver",
+      "name": "Sliver",
+      "categories": [
+        "Exploitation & Red Team"
+      ],
+      "bindings": [
+        {
+          "category": "Exploitation & Red Team",
+          "name": "Sliver",
+          "command": "sliver",
+          "kind": "cli",
+          "description": "Adversary-emulation/C2 framework for controlled labs"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "37",
+          "label": "Sliver"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "routersploit",
+      "name": "RouterSploit",
+      "categories": [
+        "Exploitation & Red Team"
+      ],
+      "bindings": [
+        {
+          "category": "Exploitation & Red Team",
+          "name": "RouterSploit",
+          "command": "rsf",
+          "kind": "cli",
+          "description": "Embedded/router security testing framework"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "38",
+          "label": "RouterSploit"
+        },
+        {
+          "suite": "LScript",
+          "source_id": "routersploit",
+          "label": "routersploit"
+        }
+      ],
+      "repositories": [
+        "https://github.com/reverse-shell/routersploit"
+      ]
+    },
+    {
+      "id": "ropgadget",
+      "name": "ROPgadget",
+      "categories": [
+        "Exploitation & Red Team"
+      ],
+      "bindings": [
+        {
+          "category": "Exploitation & Red Team",
+          "name": "ROPgadget",
+          "command": "ROPgadget",
+          "kind": "cli",
+          "description": "ROP gadget discovery"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "39",
+          "label": "ROPgadget"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "ropper",
+      "name": "Ropper",
+      "categories": [
+        "Exploitation & Red Team"
+      ],
+      "bindings": [
+        {
+          "category": "Exploitation & Red Team",
+          "name": "Ropper",
+          "command": "ropper",
+          "kind": "cli",
+          "description": "ROP gadget and binary analysis"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "40",
+          "label": "Ropper"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "pwn",
+      "name": "pwntools CLI",
+      "categories": [
+        "Exploitation & Red Team"
+      ],
+      "bindings": [
+        {
+          "category": "Exploitation & Red Team",
+          "name": "pwntools CLI",
+          "command": "pwn",
+          "kind": "cli",
+          "description": "Exploit-development helper commands"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "41",
+          "label": "pwntools CLI"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "nxc",
+      "name": "NetExec",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "NetExec",
+          "command": "nxc",
+          "kind": "cli",
+          "description": "Windows/AD network enumeration and authenticated testing"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "42",
+          "label": "NetExec"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "impacketsmbserver",
+      "name": "Impacket SMB Server",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "Impacket SMB Server",
+          "command": "impacket-smbserver",
+          "kind": "cli",
+          "description": "Impacket SMB server utility"
+        },
+        {
+          "category": "Active Directory",
+          "name": "Impacket SMB Server",
+          "command": "impacket-smbserver",
+          "kind": "cli",
+          "description": "Impacket SMB server"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "43",
+          "label": "Impacket SMB Server"
+        },
+        {
+          "suite": "pentest-menu",
+          "source_id": "160",
+          "label": "Impacket SMB Server"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "impacketsecretsdump",
+      "name": "Impacket SecretsDump",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "Impacket SecretsDump",
+          "command": "impacket-secretsdump",
+          "kind": "cli",
+          "description": "Impacket credential extraction utility for authorized systems"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "44",
+          "label": "Impacket SecretsDump"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "bloodhoundpython",
+      "name": "BloodHound Python",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "BloodHound Python",
+          "command": "bloodhound-python",
+          "kind": "cli",
+          "description": "AD data collection for BloodHound"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "45",
+          "label": "BloodHound Python"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "certipy",
+      "name": "Certipy",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "Certipy",
+          "command": "certipy",
+          "kind": "cli",
+          "description": "Active Directory Certificate Services assessment"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "46",
+          "label": "Certipy"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "kerbrute",
+      "name": "Kerbrute",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "Kerbrute",
+          "command": "kerbrute",
+          "kind": "cli",
+          "description": "Kerberos account/authentication testing"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "47",
+          "label": "Kerbrute"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "smbmap",
+      "name": "SMBMap",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "SMBMap",
+          "command": "smbmap",
+          "kind": "cli",
+          "description": "SMB share enumeration"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "49",
+          "label": "SMBMap"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "evilwinrm",
+      "name": "Evil-WinRM",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "Evil-WinRM",
+          "command": "evil-winrm",
+          "kind": "cli",
+          "description": "WinRM client for authorized administration/testing"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "50",
+          "label": "Evil-WinRM"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "bloodhoundceup",
+      "name": "BloodHound CE Start",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "BloodHound CE Start",
+          "command": "bloodhound-ce-up",
+          "kind": "helper",
+          "description": "Start local BloodHound CE Docker stack"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "51",
+          "label": "BloodHound CE Start"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "bloodhoundcedown",
+      "name": "BloodHound CE Stop",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "BloodHound CE Stop",
+          "command": "bloodhound-ce-down",
+          "kind": "helper",
+          "description": "Stop local BloodHound CE Docker stack"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "52",
+          "label": "BloodHound CE Stop"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "aircrackng",
+      "name": "Aircrack-ng",
+      "categories": [
+        "Wireless"
+      ],
+      "bindings": [
+        {
+          "category": "Wireless",
+          "name": "Aircrack-ng",
+          "command": "aircrack-ng",
+          "kind": "cli",
+          "description": "802.11 auditing suite"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "53",
+          "label": "Aircrack-ng"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "airodumpng",
+      "name": "Airodump-ng",
+      "categories": [
+        "Wireless"
+      ],
+      "bindings": [
+        {
+          "category": "Wireless",
+          "name": "Airodump-ng",
+          "command": "airodump-ng",
+          "kind": "root",
+          "description": "802.11 packet capture and AP/client discovery"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "54",
+          "label": "Airodump-ng"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "aireplayng",
+      "name": "Aireplay-ng",
+      "categories": [
+        "Wireless"
+      ],
+      "bindings": [
+        {
+          "category": "Wireless",
+          "name": "Aireplay-ng",
+          "command": "aireplay-ng",
+          "kind": "root",
+          "description": "802.11 frame injection/testing"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "55",
+          "label": "Aireplay-ng"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "hcxdumptool",
+      "name": "hcxdumptool",
+      "categories": [
+        "Wireless"
+      ],
+      "bindings": [
+        {
+          "category": "Wireless",
+          "name": "hcxdumptool",
+          "command": "hcxdumptool",
+          "kind": "root",
+          "description": "802.11 capture tool for hcxtools workflow"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "56",
+          "label": "hcxdumptool"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "hcxpcapngtool",
+      "name": "hcxpcapngtool",
+      "categories": [
+        "Wireless"
+      ],
+      "bindings": [
+        {
+          "category": "Wireless",
+          "name": "hcxpcapngtool",
+          "command": "hcxpcapngtool",
+          "kind": "cli",
+          "description": "Convert/analyze Wi-Fi capture files"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "57",
+          "label": "hcxpcapngtool"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "hashcat",
+      "name": "Hashcat",
+      "categories": [
+        "Wireless"
+      ],
+      "bindings": [
+        {
+          "category": "Wireless",
+          "name": "Hashcat",
+          "command": "hashcat",
+          "kind": "cli",
+          "description": "GPU/CPU password hash auditing"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "58",
+          "label": "Hashcat"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "crunch",
+      "name": "Crunch",
+      "categories": [
+        "Wireless"
+      ],
+      "bindings": [
+        {
+          "category": "Wireless",
+          "name": "Crunch",
+          "command": "crunch",
+          "kind": "cli",
+          "description": "Candidate/wordlist generator"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "59",
+          "label": "Crunch"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "reaver",
+      "name": "Reaver",
+      "categories": [
+        "Wireless"
+      ],
+      "bindings": [
+        {
+          "category": "Wireless",
+          "name": "Reaver",
+          "command": "reaver",
+          "kind": "root",
+          "description": "WPS security assessment"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "60",
+          "label": "Reaver"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "bully",
+      "name": "Bully",
+      "categories": [
+        "Wireless"
+      ],
+      "bindings": [
+        {
+          "category": "Wireless",
+          "name": "Bully",
+          "command": "bully",
+          "kind": "root",
+          "description": "WPS assessment tool"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "61",
+          "label": "Bully"
+        },
+        {
+          "suite": "LScript",
+          "source_id": "bully",
+          "label": "bully"
+        }
+      ],
+      "repositories": [
+        "https://github.com/aanarchyy/bully"
+      ]
+    },
+    {
+      "id": "pixiewps",
+      "name": "Pixiewps",
+      "categories": [
+        "Wireless"
+      ],
+      "bindings": [
+        {
+          "category": "Wireless",
+          "name": "Pixiewps",
+          "command": "pixiewps",
+          "kind": "cli",
+          "description": "WPS Pixie Dust analysis"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "62",
+          "label": "Pixiewps"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "mdk4",
+      "name": "MDK4",
+      "categories": [
+        "Wireless"
+      ],
+      "bindings": [
+        {
+          "category": "Wireless",
+          "name": "MDK4",
+          "command": "mdk4",
+          "kind": "root",
+          "description": "802.11 test framework"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "63",
+          "label": "MDK4"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "airgeddon",
+      "name": "Airgeddon",
+      "categories": [
+        "Wireless"
+      ],
+      "bindings": [
+        {
+          "category": "Wireless",
+          "name": "Airgeddon",
+          "command": "airgeddon",
+          "kind": "root",
+          "description": "Wireless auditing workflow framework"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "64",
+          "label": "Airgeddon"
+        },
+        {
+          "suite": "LScript",
+          "source_id": "airgeddon",
+          "label": "airgeddon"
+        }
+      ],
+      "repositories": [
+        "https://github.com/v1s1t0r1sh3r3/airgeddon"
+      ]
+    },
+    {
+      "id": "wifite",
+      "name": "Wifite",
+      "categories": [
+        "Wireless"
+      ],
+      "bindings": [
+        {
+          "category": "Wireless",
+          "name": "Wifite",
+          "command": "wifite",
+          "kind": "root",
+          "description": "Automated wireless audit workflow"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "65",
+          "label": "Wifite"
+        },
+        {
+          "suite": "LScript",
+          "source_id": "wifite",
+          "label": "wifite"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "kismet",
+      "name": "Kismet",
+      "categories": [
+        "Wireless"
+      ],
+      "bindings": [
+        {
+          "category": "Wireless",
+          "name": "Kismet",
+          "command": "kismet",
+          "kind": "root",
+          "description": "Wireless discovery, capture and monitoring"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "66",
+          "label": "Kismet"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "maltego",
+      "name": "Maltego",
+      "categories": [
+        "OSINT"
+      ],
+      "bindings": [
+        {
+          "category": "OSINT",
+          "name": "Maltego",
+          "command": "maltego",
+          "kind": "gui",
+          "description": "Graph-based OSINT and link analysis"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "67",
+          "label": "Maltego"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "spiderfoot",
+      "name": "SpiderFoot",
+      "categories": [
+        "OSINT"
+      ],
+      "bindings": [
+        {
+          "category": "OSINT",
+          "name": "SpiderFoot",
+          "command": "spiderfoot",
+          "kind": "helper",
+          "description": "Launch local SpiderFoot web UI on 127.0.0.1:5001"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "68",
+          "label": "SpiderFoot"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "theharvester",
+      "name": "theHarvester",
+      "categories": [
+        "OSINT"
+      ],
+      "bindings": [
+        {
+          "category": "OSINT",
+          "name": "theHarvester",
+          "command": "theHarvester",
+          "kind": "cli",
+          "description": "Email, host and subdomain OSINT collection"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "69",
+          "label": "theHarvester"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "reconng",
+      "name": "Recon-ng",
+      "categories": [
+        "OSINT"
+      ],
+      "bindings": [
+        {
+          "category": "OSINT",
+          "name": "Recon-ng",
+          "command": "recon-ng",
+          "kind": "cli",
+          "description": "Modular web reconnaissance framework"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "70",
+          "label": "Recon-ng"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "amass",
+      "name": "Amass",
+      "categories": [
+        "OSINT"
+      ],
+      "bindings": [
+        {
+          "category": "OSINT",
+          "name": "Amass",
+          "command": "amass",
+          "kind": "cli",
+          "description": "Attack-surface and DNS relationship mapping"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "71",
+          "label": "Amass"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "sherlock",
+      "name": "Sherlock",
+      "categories": [
+        "OSINT"
+      ],
+      "bindings": [
+        {
+          "category": "OSINT",
+          "name": "Sherlock",
+          "command": "sherlock",
+          "kind": "cli",
+          "description": "Username search across social sites"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "72",
+          "label": "Sherlock"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "maigret",
+      "name": "Maigret",
+      "categories": [
+        "OSINT"
+      ],
+      "bindings": [
+        {
+          "category": "OSINT",
+          "name": "Maigret",
+          "command": "maigret",
+          "kind": "cli",
+          "description": "Username/account OSINT"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "73",
+          "label": "Maigret"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "holehe",
+      "name": "Holehe",
+      "categories": [
+        "OSINT"
+      ],
+      "bindings": [
+        {
+          "category": "OSINT",
+          "name": "Holehe",
+          "command": "holehe",
+          "kind": "cli",
+          "description": "Check email registration across supported sites"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "74",
+          "label": "Holehe"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "ghunt",
+      "name": "GHunt",
+      "categories": [
+        "OSINT"
+      ],
+      "bindings": [
+        {
+          "category": "OSINT",
+          "name": "GHunt",
+          "command": "ghunt",
+          "kind": "cli",
+          "description": "Google account OSINT toolkit"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "75",
+          "label": "GHunt"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "bbot",
+      "name": "BBOT",
+      "categories": [
+        "OSINT"
+      ],
+      "bindings": [
+        {
+          "category": "OSINT",
+          "name": "BBOT",
+          "command": "bbot",
+          "kind": "cli",
+          "description": "Recursive attack-surface/OSINT automation"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "76",
+          "label": "BBOT"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "phoneinfoga",
+      "name": "PhoneInfoga",
+      "categories": [
+        "OSINT"
+      ],
+      "bindings": [
+        {
+          "category": "OSINT",
+          "name": "PhoneInfoga",
+          "command": "phoneinfoga",
+          "kind": "cli",
+          "description": "Phone-number OSINT framework"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "77",
+          "label": "PhoneInfoga"
+        },
+        {
+          "suite": "BCHackTool",
+          "source_id": "18",
+          "label": "PhoneInfoga"
+        }
+      ],
+      "repositories": [
+        "https://github.com/Wes974/PhoneInfoga"
+      ]
+    },
+    {
+      "id": "dnstwist",
+      "name": "dnstwist",
+      "categories": [
+        "OSINT"
+      ],
+      "bindings": [
+        {
+          "category": "OSINT",
+          "name": "dnstwist",
+          "command": "dnstwist",
+          "kind": "cli",
+          "description": "Domain permutation and typo-squatting analysis"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "78",
+          "label": "dnstwist"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "shodan",
+      "name": "Shodan CLI",
+      "categories": [
+        "OSINT"
+      ],
+      "bindings": [
+        {
+          "category": "OSINT",
+          "name": "Shodan CLI",
+          "command": "shodan",
+          "kind": "cli",
+          "description": "Shodan search/API command-line client"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "79",
+          "label": "Shodan CLI"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "censys",
+      "name": "Censys CLI",
+      "categories": [
+        "OSINT"
+      ],
+      "bindings": [
+        {
+          "category": "OSINT",
+          "name": "Censys CLI",
+          "command": "censys",
+          "kind": "cli",
+          "description": "Censys search/API client"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "80",
+          "label": "Censys CLI"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "trufflehog",
+      "name": "TruffleHog",
+      "categories": [
+        "OSINT"
+      ],
+      "bindings": [
+        {
+          "category": "OSINT",
+          "name": "TruffleHog",
+          "command": "trufflehog",
+          "kind": "cli",
+          "description": "Secret discovery in repositories/filesystems"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "81",
+          "label": "TruffleHog"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "gitleaks",
+      "name": "Gitleaks",
+      "categories": [
+        "OSINT"
+      ],
+      "bindings": [
+        {
+          "category": "OSINT",
+          "name": "Gitleaks",
+          "command": "gitleaks",
+          "kind": "cli",
+          "description": "Secret scanning for Git repositories"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "82",
+          "label": "Gitleaks"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "trivy",
+      "name": "Trivy",
+      "categories": [
+        "Cloud & Containers"
+      ],
+      "bindings": [
+        {
+          "category": "Cloud & Containers",
+          "name": "Trivy",
+          "command": "trivy",
+          "kind": "cli",
+          "description": "Container, filesystem and IaC vulnerability scanner"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "83",
+          "label": "Trivy"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "grype",
+      "name": "Grype",
+      "categories": [
+        "Cloud & Containers"
+      ],
+      "bindings": [
+        {
+          "category": "Cloud & Containers",
+          "name": "Grype",
+          "command": "grype",
+          "kind": "cli",
+          "description": "SBOM/container vulnerability scanner"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "84",
+          "label": "Grype"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "syft",
+      "name": "Syft",
+      "categories": [
+        "Cloud & Containers"
+      ],
+      "bindings": [
+        {
+          "category": "Cloud & Containers",
+          "name": "Syft",
+          "command": "syft",
+          "kind": "cli",
+          "description": "SBOM generation"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "85",
+          "label": "Syft"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "semgrep",
+      "name": "Semgrep",
+      "categories": [
+        "Cloud & Containers"
+      ],
+      "bindings": [
+        {
+          "category": "Cloud & Containers",
+          "name": "Semgrep",
+          "command": "semgrep",
+          "kind": "cli",
+          "description": "Static analysis and security rules"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "86",
+          "label": "Semgrep"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "checkov",
+      "name": "Checkov",
+      "categories": [
+        "Cloud & Containers"
+      ],
+      "bindings": [
+        {
+          "category": "Cloud & Containers",
+          "name": "Checkov",
+          "command": "checkov",
+          "kind": "cli",
+          "description": "Infrastructure-as-code security scanner"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "87",
+          "label": "Checkov"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "prowler",
+      "name": "Prowler",
+      "categories": [
+        "Cloud & Containers"
+      ],
+      "bindings": [
+        {
+          "category": "Cloud & Containers",
+          "name": "Prowler",
+          "command": "prowler",
+          "kind": "cli",
+          "description": "Cloud security posture assessment"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "88",
+          "label": "Prowler"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "scout",
+      "name": "ScoutSuite",
+      "categories": [
+        "Cloud & Containers"
+      ],
+      "bindings": [
+        {
+          "category": "Cloud & Containers",
+          "name": "ScoutSuite",
+          "command": "scout",
+          "kind": "cli",
+          "description": "Multi-cloud security auditing"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "89",
+          "label": "ScoutSuite"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "cloudfox",
+      "name": "CloudFox",
+      "categories": [
+        "Cloud & Containers"
+      ],
+      "bindings": [
+        {
+          "category": "Cloud & Containers",
+          "name": "CloudFox",
+          "command": "cloudfox",
+          "kind": "cli",
+          "description": "Cloud situational awareness/attack-path discovery"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "90",
+          "label": "CloudFox"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "pacu",
+      "name": "Pacu",
+      "categories": [
+        "Cloud & Containers"
+      ],
+      "bindings": [
+        {
+          "category": "Cloud & Containers",
+          "name": "Pacu",
+          "command": "pacu",
+          "kind": "cli",
+          "description": "AWS security assessment framework"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "91",
+          "label": "Pacu"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "kubehunter",
+      "name": "Kube-hunter",
+      "categories": [
+        "Cloud & Containers"
+      ],
+      "bindings": [
+        {
+          "category": "Cloud & Containers",
+          "name": "Kube-hunter",
+          "command": "kube-hunter",
+          "kind": "cli",
+          "description": "Kubernetes security assessment"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "92",
+          "label": "Kube-hunter"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "categories": [
+        "Reverse Engineering"
+      ],
+      "bindings": [
+        {
+          "category": "Reverse Engineering",
+          "name": "Ghidra",
+          "command": "ghidra",
+          "kind": "gui",
+          "description": "Decompiler/disassembler and reverse-engineering suite"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "93",
+          "label": "Ghidra"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "r2",
+      "name": "radare2",
+      "categories": [
+        "Reverse Engineering"
+      ],
+      "bindings": [
+        {
+          "category": "Reverse Engineering",
+          "name": "radare2",
+          "command": "r2",
+          "kind": "cli",
+          "description": "Binary analysis and reverse engineering"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "94",
+          "label": "radare2"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "gdb",
+      "name": "GDB",
+      "categories": [
+        "Reverse Engineering"
+      ],
+      "bindings": [
+        {
+          "category": "Reverse Engineering",
+          "name": "GDB",
+          "command": "gdb",
+          "kind": "cli",
+          "description": "Native debugger"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "95",
+          "label": "GDB"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "binwalk",
+      "name": "Binwalk",
+      "categories": [
+        "Reverse Engineering"
+      ],
+      "bindings": [
+        {
+          "category": "Reverse Engineering",
+          "name": "Binwalk",
+          "command": "binwalk",
+          "kind": "cli",
+          "description": "Firmware and embedded-file analysis"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "96",
+          "label": "Binwalk"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "jadxgui",
+      "name": "JADX GUI",
+      "categories": [
+        "Reverse Engineering",
+        "Mobile"
+      ],
+      "bindings": [
+        {
+          "category": "Reverse Engineering",
+          "name": "JADX GUI",
+          "command": "jadx-gui",
+          "kind": "gui",
+          "description": "Android APK/DEX decompiler GUI"
+        },
+        {
+          "category": "Mobile",
+          "name": "JADX GUI",
+          "command": "jadx-gui",
+          "kind": "gui",
+          "description": "Android decompiler GUI"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "97",
+          "label": "JADX GUI"
+        },
+        {
+          "suite": "pentest-menu",
+          "source_id": "112",
+          "label": "JADX GUI"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "jadx",
+      "name": "JADX CLI",
+      "categories": [
+        "Reverse Engineering"
+      ],
+      "bindings": [
+        {
+          "category": "Reverse Engineering",
+          "name": "JADX CLI",
+          "command": "jadx",
+          "kind": "cli",
+          "description": "Android APK/DEX decompiler"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "98",
+          "label": "JADX CLI"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "apktool",
+      "name": "apktool",
+      "categories": [
+        "Reverse Engineering"
+      ],
+      "bindings": [
+        {
+          "category": "Reverse Engineering",
+          "name": "apktool",
+          "command": "apktool",
+          "kind": "cli",
+          "description": "Android resource and APK reverse engineering"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "99",
+          "label": "apktool"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "frida",
+      "name": "Frida",
+      "categories": [
+        "Reverse Engineering",
+        "Mobile"
+      ],
+      "bindings": [
+        {
+          "category": "Reverse Engineering",
+          "name": "Frida",
+          "command": "frida",
+          "kind": "cli",
+          "description": "Dynamic instrumentation toolkit"
+        },
+        {
+          "category": "Mobile",
+          "name": "Frida",
+          "command": "frida",
+          "kind": "cli",
+          "description": "Dynamic instrumentation"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "100",
+          "label": "Frida"
+        },
+        {
+          "suite": "pentest-menu",
+          "source_id": "113",
+          "label": "Frida"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "objection",
+      "name": "Objection",
+      "categories": [
+        "Reverse Engineering",
+        "Mobile"
+      ],
+      "bindings": [
+        {
+          "category": "Reverse Engineering",
+          "name": "Objection",
+          "command": "objection",
+          "kind": "cli",
+          "description": "Mobile runtime exploration using Frida"
+        },
+        {
+          "category": "Mobile",
+          "name": "Objection",
+          "command": "objection",
+          "kind": "cli",
+          "description": "Runtime mobile assessment"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "101",
+          "label": "Objection"
+        },
+        {
+          "suite": "pentest-menu",
+          "source_id": "114",
+          "label": "Objection"
+        },
+        {
+          "suite": "LScript",
+          "source_id": "objection",
+          "label": "objection"
+        }
+      ],
+      "repositories": [
+        "https://github.com/sensepost/objection"
+      ]
+    },
+    {
+      "id": "autopsy",
+      "name": "Autopsy",
+      "categories": [
+        "Forensics"
+      ],
+      "bindings": [
+        {
+          "category": "Forensics",
+          "name": "Autopsy",
+          "command": "autopsy",
+          "kind": "cli",
+          "description": "Digital forensics browser/interface"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "102",
+          "label": "Autopsy"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "yara",
+      "name": "YARA",
+      "categories": [
+        "Forensics"
+      ],
+      "bindings": [
+        {
+          "category": "Forensics",
+          "name": "YARA",
+          "command": "yara",
+          "kind": "cli",
+          "description": "Pattern matching for malware/forensics"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "103",
+          "label": "YARA"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "foremost",
+      "name": "Foremost",
+      "categories": [
+        "Forensics"
+      ],
+      "bindings": [
+        {
+          "category": "Forensics",
+          "name": "Foremost",
+          "command": "foremost",
+          "kind": "cli",
+          "description": "File carving"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "104",
+          "label": "Foremost"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "scalpel",
+      "name": "Scalpel",
+      "categories": [
+        "Forensics"
+      ],
+      "bindings": [
+        {
+          "category": "Forensics",
+          "name": "Scalpel",
+          "command": "scalpel",
+          "kind": "cli",
+          "description": "File carving"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "105",
+          "label": "Scalpel"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "bulkextractor",
+      "name": "Bulk Extractor",
+      "categories": [
+        "Forensics"
+      ],
+      "bindings": [
+        {
+          "category": "Forensics",
+          "name": "Bulk Extractor",
+          "command": "bulk_extractor",
+          "kind": "cli",
+          "description": "Extract forensic artifacts from images/files"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "106",
+          "label": "Bulk Extractor"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "exiftool",
+      "name": "ExifTool",
+      "categories": [
+        "Forensics"
+      ],
+      "bindings": [
+        {
+          "category": "Forensics",
+          "name": "ExifTool",
+          "command": "exiftool",
+          "kind": "cli",
+          "description": "Metadata extraction and editing"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "107",
+          "label": "ExifTool"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "testdisk",
+      "name": "TestDisk",
+      "categories": [
+        "Forensics"
+      ],
+      "bindings": [
+        {
+          "category": "Forensics",
+          "name": "TestDisk",
+          "command": "testdisk",
+          "kind": "cli",
+          "description": "Partition/filesystem recovery"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "108",
+          "label": "TestDisk"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "photorec",
+      "name": "PhotoRec",
+      "categories": [
+        "Forensics"
+      ],
+      "bindings": [
+        {
+          "category": "Forensics",
+          "name": "PhotoRec",
+          "command": "photorec",
+          "kind": "cli",
+          "description": "File recovery/carving"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "109",
+          "label": "PhotoRec"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "adb",
+      "name": "ADB",
+      "categories": [
+        "Mobile"
+      ],
+      "bindings": [
+        {
+          "category": "Mobile",
+          "name": "ADB",
+          "command": "adb",
+          "kind": "cli",
+          "description": "Android Debug Bridge"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "110",
+          "label": "ADB"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "fastboot",
+      "name": "Fastboot",
+      "categories": [
+        "Mobile"
+      ],
+      "bindings": [
+        {
+          "category": "Mobile",
+          "name": "Fastboot",
+          "command": "fastboot",
+          "kind": "cli",
+          "description": "Android bootloader utility"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "111",
+          "label": "Fastboot"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "mobsfup",
+      "name": "MobSF Start",
+      "categories": [
+        "Mobile"
+      ],
+      "bindings": [
+        {
+          "category": "Mobile",
+          "name": "MobSF Start",
+          "command": "mobsf-up",
+          "kind": "helper",
+          "description": "Start local MobSF container"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "115",
+          "label": "MobSF Start"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "arpscan",
+      "name": "ARP Scan",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "ARP Scan",
+          "command": "arp-scan",
+          "kind": "root",
+          "description": "Layer-2 IPv4 host discovery"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "116",
+          "label": "ARP Scan"
+        },
+        {
+          "suite": "LScript",
+          "source_id": "arp_scan",
+          "label": "arp scan"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "netdiscover",
+      "name": "Netdiscover",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "Netdiscover",
+          "command": "netdiscover",
+          "kind": "root",
+          "description": "Passive/active ARP network discovery"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "117",
+          "label": "Netdiscover"
+        },
+        {
+          "suite": "LScript",
+          "source_id": "netdiscover",
+          "label": "netdiscover"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "hping3",
+      "name": "Hping3",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "Hping3",
+          "command": "hping3",
+          "kind": "root",
+          "description": "Custom TCP/IP packet generation and testing"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "118",
+          "label": "Hping3"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "mtr",
+      "name": "MTR",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "MTR",
+          "command": "mtr",
+          "kind": "cli",
+          "description": "Combined traceroute and latency analysis"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "119",
+          "label": "MTR"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "iperf3",
+      "name": "iperf3",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "iperf3",
+          "command": "iperf3",
+          "kind": "cli",
+          "description": "Network throughput testing"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "120",
+          "label": "iperf3"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "onesixtyone",
+      "name": "OneSixtyOne",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "OneSixtyOne",
+          "command": "onesixtyone",
+          "kind": "cli",
+          "description": "Fast SNMP community discovery"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "121",
+          "label": "OneSixtyOne"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "nbtscan",
+      "name": "NBTScan",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "NBTScan",
+          "command": "nbtscan",
+          "kind": "cli",
+          "description": "NetBIOS network enumeration"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "122",
+          "label": "NBTScan"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "hydra",
+      "name": "Hydra",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "Hydra",
+          "command": "hydra",
+          "kind": "cli",
+          "description": "Network authentication auditing"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "123",
+          "label": "Hydra"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "ncrack",
+      "name": "Ncrack",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "Ncrack",
+          "command": "ncrack",
+          "kind": "cli",
+          "description": "Network authentication auditing"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "124",
+          "label": "Ncrack"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "medusa",
+      "name": "Medusa",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "Medusa",
+          "command": "medusa",
+          "kind": "cli",
+          "description": "Parallel network authentication auditing"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "125",
+          "label": "Medusa"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "john",
+      "name": "John the Ripper",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "John the Ripper",
+          "command": "john",
+          "kind": "cli",
+          "description": "Password hash auditing"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "126",
+          "label": "John the Ripper"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "cewl",
+      "name": "CeWL",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "CeWL",
+          "command": "cewl",
+          "kind": "cli",
+          "description": "Custom wordlist generation from web content"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "127",
+          "label": "CeWL"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "patator",
+      "name": "Patator",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "Patator",
+          "command": "patator",
+          "kind": "cli",
+          "description": "Multi-protocol authentication testing"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "128",
+          "label": "Patator"
+        },
+        {
+          "suite": "LScript",
+          "source_id": "patator",
+          "label": "patator"
+        }
+      ],
+      "repositories": [
+        "https://github.com/lanjelot/patator"
+      ]
+    },
+    {
+      "id": "ikescan",
+      "name": "IKE Scan",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "IKE Scan",
+          "command": "ike-scan",
+          "kind": "root",
+          "description": "IKE/IPsec VPN discovery"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "129",
+          "label": "IKE Scan"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "ngrep",
+      "name": "ngrep",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "ngrep",
+          "command": "ngrep",
+          "kind": "root",
+          "description": "Network packet grep"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "130",
+          "label": "ngrep"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "sngrep",
+      "name": "sngrep",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "sngrep",
+          "command": "sngrep",
+          "kind": "root",
+          "description": "SIP signaling capture and inspection"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "131",
+          "label": "sngrep"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "tcpreplay",
+      "name": "tcpreplay",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "tcpreplay",
+          "command": "tcpreplay",
+          "kind": "root",
+          "description": "Replay captured packet traffic"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "132",
+          "label": "tcpreplay"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "tcpflow",
+      "name": "tcpflow",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "tcpflow",
+          "command": "tcpflow",
+          "kind": "root",
+          "description": "TCP stream reconstruction"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "133",
+          "label": "tcpflow"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "netsniffng",
+      "name": "netsniff-ng",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "netsniff-ng",
+          "command": "netsniff-ng",
+          "kind": "root",
+          "description": "High-performance packet capture toolkit"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "134",
+          "label": "netsniff-ng"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "yersinia",
+      "name": "Yersinia",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "Yersinia",
+          "command": "yersinia",
+          "kind": "root",
+          "description": "Layer-2 protocol testing"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "135",
+          "label": "Yersinia"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "dnsrecon",
+      "name": "DNSRecon",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "DNSRecon",
+          "command": "dnsrecon",
+          "kind": "cli",
+          "description": "DNS enumeration"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "136",
+          "label": "DNSRecon"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "fierce",
+      "name": "Fierce",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "Fierce",
+          "command": "fierce",
+          "kind": "cli",
+          "description": "DNS reconnaissance"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "137",
+          "label": "Fierce"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "mapcidr",
+      "name": "MapCIDR",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "MapCIDR",
+          "command": "mapcidr",
+          "kind": "cli",
+          "description": "CIDR manipulation and expansion"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "138",
+          "label": "MapCIDR"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "asnmap",
+      "name": "ASNMap",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "ASNMap",
+          "command": "asnmap",
+          "kind": "cli",
+          "description": "ASN and network mapping"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "139",
+          "label": "ASNMap"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "sipvicioussvmap",
+      "name": "SIPVicious Map",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "SIPVicious Map",
+          "command": "sipvicious_svmap",
+          "kind": "cli",
+          "description": "SIP endpoint discovery"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "140",
+          "label": "SIPVicious Map"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "mitmproxy",
+      "name": "MITMProxy",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "MITMProxy",
+          "command": "mitmproxy",
+          "kind": "cli",
+          "description": "Interactive HTTP/TLS interception proxy"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "141",
+          "label": "MITMProxy"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "mitmweb",
+      "name": "MITMWeb",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "MITMWeb",
+          "command": "mitmweb",
+          "kind": "cli",
+          "description": "Web UI for mitmproxy"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "142",
+          "label": "MITMWeb"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "enum4linuxng",
+      "name": "enum4linux-ng",
+      "categories": [
+        "Network & Recon"
+      ],
+      "bindings": [
+        {
+          "category": "Network & Recon",
+          "name": "enum4linux-ng",
+          "command": "enum4linux-ng",
+          "kind": "cli",
+          "description": "Modern SMB/Windows enumeration"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "143",
+          "label": "enum4linux-ng"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "interactshclient",
+      "name": "Interactsh Client",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "Interactsh Client",
+          "command": "interactsh-client",
+          "kind": "cli",
+          "description": "Out-of-band interaction client"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "144",
+          "label": "Interactsh Client"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "tlsx",
+      "name": "TLSX",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "TLSX",
+          "command": "tlsx",
+          "kind": "cli",
+          "description": "TLS data collection and analysis"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "145",
+          "label": "TLSX"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "uncover",
+      "name": "Uncover",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "Uncover",
+          "command": "uncover",
+          "kind": "cli",
+          "description": "Search-engine based attack-surface discovery"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "146",
+          "label": "Uncover"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "gau",
+      "name": "GAU",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "GAU",
+          "command": "gau",
+          "kind": "cli",
+          "description": "Fetch known URLs from public sources"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "147",
+          "label": "GAU"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "waybackurls",
+      "name": "WaybackURLs",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "WaybackURLs",
+          "command": "waybackurls",
+          "kind": "cli",
+          "description": "Fetch URLs from Wayback Machine"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "148",
+          "label": "WaybackURLs"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "anew",
+      "name": "Anew",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "Anew",
+          "command": "anew",
+          "kind": "cli",
+          "description": "Append only unique input lines"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "149",
+          "label": "Anew"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "unfurl",
+      "name": "Unfurl",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "Unfurl",
+          "command": "unfurl",
+          "kind": "cli",
+          "description": "URL parsing and extraction"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "150",
+          "label": "Unfurl"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "qsreplace",
+      "name": "QSReplace",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "QSReplace",
+          "command": "qsreplace",
+          "kind": "cli",
+          "description": "Replace URL query-string values"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "151",
+          "label": "QSReplace"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "gf",
+      "name": "GF",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "GF",
+          "command": "gf",
+          "kind": "cli",
+          "description": "Pattern-based grep for security workflows"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "152",
+          "label": "GF"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "grpcurl",
+      "name": "gRPCurl",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "gRPCurl",
+          "command": "grpcurl",
+          "kind": "cli",
+          "description": "Interact with gRPC services"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "153",
+          "label": "gRPCurl"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "websocat",
+      "name": "Websocat",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "Websocat",
+          "command": "websocat",
+          "kind": "cli",
+          "description": "WebSocket command-line client"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "154",
+          "label": "Websocat"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "dirsearch",
+      "name": "Dirsearch",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "Dirsearch",
+          "command": "dirsearch",
+          "kind": "cli",
+          "description": "Web content discovery"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "155",
+          "label": "Dirsearch"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "droopescan",
+      "name": "Droopescan",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "Droopescan",
+          "command": "droopescan",
+          "kind": "cli",
+          "description": "CMS vulnerability scanner"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "156",
+          "label": "Droopescan"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "wpscan",
+      "name": "WPScan",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "WPScan",
+          "command": "wpscan",
+          "kind": "cli",
+          "description": "WordPress security scanner"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "157",
+          "label": "WPScan"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "sslscan",
+      "name": "SSLScan",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "SSLScan",
+          "command": "sslscan",
+          "kind": "cli",
+          "description": "TLS cipher and certificate scanner"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "158",
+          "label": "SSLScan"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "whatweb",
+      "name": "WhatWeb",
+      "categories": [
+        "Web & API"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "WhatWeb",
+          "command": "whatweb",
+          "kind": "cli",
+          "description": "Web technology fingerprinting"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "159",
+          "label": "WhatWeb"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "impacketpsexec",
+      "name": "Impacket PsExec",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "Impacket PsExec",
+          "command": "impacket-psexec",
+          "kind": "cli",
+          "description": "Remote service execution on authorized Windows systems"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "161",
+          "label": "Impacket PsExec"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "impacketwmiexec",
+      "name": "Impacket WMIExec",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "Impacket WMIExec",
+          "command": "impacket-wmiexec",
+          "kind": "cli",
+          "description": "Remote WMI execution on authorized Windows systems"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "162",
+          "label": "Impacket WMIExec"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "impacketsmbexec",
+      "name": "Impacket SMBExec",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "Impacket SMBExec",
+          "command": "impacket-smbexec",
+          "kind": "cli",
+          "description": "Remote SMB service execution"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "163",
+          "label": "Impacket SMBExec"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "impacketmssqlclient",
+      "name": "Impacket MSSQL Client",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "Impacket MSSQL Client",
+          "command": "impacket-mssqlclient",
+          "kind": "cli",
+          "description": "MSSQL client"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "164",
+          "label": "Impacket MSSQL Client"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "ldapdomaindump",
+      "name": "LDAPDomainDump",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "LDAPDomainDump",
+          "command": "ldapdomaindump",
+          "kind": "cli",
+          "description": "LDAP domain enumeration"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "165",
+          "label": "LDAPDomainDump"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "ldd2bloodhound",
+      "name": "LDAP to BloodHound",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "LDAP to BloodHound",
+          "command": "ldd2bloodhound",
+          "kind": "cli",
+          "description": "Convert LDAPDomainDump data for BloodHound"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "166",
+          "label": "LDAP to BloodHound"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "mitm6",
+      "name": "mitm6",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "mitm6",
+          "command": "mitm6",
+          "kind": "root",
+          "description": "IPv6/DNS Windows network assessment"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "167",
+          "label": "mitm6"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "pypykatz",
+      "name": "pypykatz",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "pypykatz",
+          "command": "pypykatz",
+          "kind": "cli",
+          "description": "Windows credential-material analysis"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "168",
+          "label": "pypykatz"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "roadrecon",
+      "name": "ROADrecon",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "ROADrecon",
+          "command": "roadrecon",
+          "kind": "cli",
+          "description": "Azure/Entra reconnaissance"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "169",
+          "label": "ROADrecon"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "roadrecongui",
+      "name": "ROADrecon GUI",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "ROADrecon GUI",
+          "command": "roadrecon-gui",
+          "kind": "cli",
+          "description": "ROADrecon local web interface"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "170",
+          "label": "ROADrecon GUI"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "ldeep",
+      "name": "ldeep",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "ldeep",
+          "command": "ldeep",
+          "kind": "cli",
+          "description": "LDAP enumeration utility"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "171",
+          "label": "ldeep"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "adidnsdump",
+      "name": "ADIDNSDump",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "ADIDNSDump",
+          "command": "adidnsdump",
+          "kind": "cli",
+          "description": "AD-integrated DNS enumeration"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "172",
+          "label": "ADIDNSDump"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "coercer",
+      "name": "Coercer",
+      "categories": [
+        "Active Directory"
+      ],
+      "bindings": [
+        {
+          "category": "Active Directory",
+          "name": "Coercer",
+          "command": "coercer",
+          "kind": "cli",
+          "description": "Windows authentication coercion assessment"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "173",
+          "label": "Coercer"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "cowpatty",
+      "name": "Cowpatty",
+      "categories": [
+        "Wireless"
+      ],
+      "bindings": [
+        {
+          "category": "Wireless",
+          "name": "Cowpatty",
+          "command": "cowpatty",
+          "kind": "cli",
+          "description": "WPA/WPA2 PSK auditing"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "174",
+          "label": "Cowpatty"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "wifiphisher",
+      "name": "Wifiphisher",
+      "categories": [
+        "Wireless"
+      ],
+      "bindings": [
+        {
+          "category": "Wireless",
+          "name": "Wifiphisher",
+          "command": "wifiphisher",
+          "kind": "root",
+          "description": "Wireless security assessment framework"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "175",
+          "label": "Wifiphisher"
+        },
+        {
+          "suite": "LScript",
+          "source_id": "wifiphisher",
+          "label": "wifiphisher"
+        }
+      ],
+      "repositories": [
+        "https://github.com/wifiphisher/wifiphisher"
+      ]
+    },
+    {
+      "id": "iw",
+      "name": "iw",
+      "categories": [
+        "Wireless"
+      ],
+      "bindings": [
+        {
+          "category": "Wireless",
+          "name": "iw",
+          "command": "iw",
+          "kind": "root",
+          "description": "Linux wireless configuration and diagnostics"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "176",
+          "label": "iw"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "rfkill",
+      "name": "rfkill",
+      "categories": [
+        "Wireless"
+      ],
+      "bindings": [
+        {
+          "category": "Wireless",
+          "name": "rfkill",
+          "command": "rfkill",
+          "kind": "root",
+          "description": "Radio enable/disable management"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "177",
+          "label": "rfkill"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "hostapd",
+      "name": "hostapd",
+      "categories": [
+        "Wireless"
+      ],
+      "bindings": [
+        {
+          "category": "Wireless",
+          "name": "hostapd",
+          "command": "hostapd",
+          "kind": "root",
+          "description": "Linux software AP daemon"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "178",
+          "label": "hostapd"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "clinfo",
+      "name": "CLInfo",
+      "categories": [
+        "Wireless"
+      ],
+      "bindings": [
+        {
+          "category": "Wireless",
+          "name": "CLInfo",
+          "command": "clinfo",
+          "kind": "cli",
+          "description": "OpenCL device/runtime information"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "179",
+          "label": "CLInfo"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "volpy",
+      "name": "Volatility 3",
+      "categories": [
+        "Forensics"
+      ],
+      "bindings": [
+        {
+          "category": "Forensics",
+          "name": "Volatility 3",
+          "command": "vol.py",
+          "kind": "cli",
+          "description": "Memory forensics framework"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "180",
+          "label": "Volatility 3"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "olevba",
+      "name": "OLE VBA",
+      "categories": [
+        "Forensics"
+      ],
+      "bindings": [
+        {
+          "category": "Forensics",
+          "name": "OLE VBA",
+          "command": "olevba",
+          "kind": "cli",
+          "description": "Office VBA macro analysis"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "181",
+          "label": "OLE VBA"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "oleid",
+      "name": "OLE ID",
+      "categories": [
+        "Forensics"
+      ],
+      "bindings": [
+        {
+          "category": "Forensics",
+          "name": "OLE ID",
+          "command": "oleid",
+          "kind": "cli",
+          "description": "Office document identification"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "182",
+          "label": "OLE ID"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "rtfobj",
+      "name": "RTFObj",
+      "categories": [
+        "Forensics"
+      ],
+      "bindings": [
+        {
+          "category": "Forensics",
+          "name": "RTFObj",
+          "command": "rtfobj",
+          "kind": "cli",
+          "description": "RTF embedded-object analysis"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "183",
+          "label": "RTFObj"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "pentestupdate",
+      "name": "Pentest Update",
+      "categories": [
+        "Maintenance"
+      ],
+      "bindings": [
+        {
+          "category": "Maintenance",
+          "name": "Pentest Update",
+          "command": "pentest-update",
+          "kind": "helper",
+          "description": "Update/re-run the Ultimate Pentest installer"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "184",
+          "label": "Pentest Update"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "ultimatepentestubuntu",
+      "name": "Ultimate Installer",
+      "categories": [
+        "Maintenance"
+      ],
+      "bindings": [
+        {
+          "category": "Maintenance",
+          "name": "Ultimate Installer",
+          "command": "ultimate-pentest-ubuntu",
+          "kind": "helper",
+          "description": "Re-run installer with category arguments"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "185",
+          "label": "Ultimate Installer"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "installmaltegodownloaded",
+      "name": "Install downloaded Maltego",
+      "categories": [
+        "Maintenance"
+      ],
+      "bindings": [
+        {
+          "category": "Maintenance",
+          "name": "Install downloaded Maltego",
+          "command": "install-maltego-downloaded",
+          "kind": "helper",
+          "description": "Install Maltego .deb from invoking user's Downloads directory"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "186",
+          "label": "Install downloaded Maltego"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "eternalbluec",
+      "name": "EternalBlueC sources",
+      "categories": [
+        "GitHub References"
+      ],
+      "bindings": [
+        {
+          "category": "GitHub References",
+          "name": "EternalBlueC sources",
+          "command": "EternalBlueC-source",
+          "kind": "gui",
+          "description": "Source reference - native Ubuntu runtime not installed"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "187",
+          "label": "EternalBlueC sources"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "eternalscanner",
+      "name": "Eternal Scanner sources",
+      "categories": [
+        "GitHub References"
+      ],
+      "bindings": [
+        {
+          "category": "GitHub References",
+          "name": "Eternal Scanner sources",
+          "command": "eternal_scanner-source",
+          "kind": "gui",
+          "description": "Legacy scanner source - compatibility review required"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "188",
+          "label": "Eternal Scanner sources"
+        },
+        {
+          "suite": "LScript",
+          "source_id": "eternalscanner",
+          "label": "eternalscanner"
+        }
+      ],
+      "repositories": [
+        "https://github.com/peterpt/eternal_scanner"
+      ]
+    },
+    {
+      "id": "h4cker",
+      "name": "h4cker resources",
+      "categories": [
+        "GitHub References"
+      ],
+      "bindings": [
+        {
+          "category": "GitHub References",
+          "name": "h4cker resources",
+          "command": "h4cker-source",
+          "kind": "gui",
+          "description": "Browse local training and security resources"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "189",
+          "label": "h4cker resources"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "awesomehackingresources",
+      "name": "Awesome Hacking Resources",
+      "categories": [
+        "GitHub References"
+      ],
+      "bindings": [
+        {
+          "category": "GitHub References",
+          "name": "Awesome Hacking Resources",
+          "command": "Awesome-Hacking-Resources-source",
+          "kind": "gui",
+          "description": "Browse local reference collection"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "190",
+          "label": "Awesome Hacking Resources"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "powersploit",
+      "name": "PowerSploit sources",
+      "categories": [
+        "GitHub References"
+      ],
+      "bindings": [
+        {
+          "category": "GitHub References",
+          "name": "PowerSploit sources",
+          "command": "PowerSploit-source",
+          "kind": "gui",
+          "description": "Windows PowerShell modules - source checkout"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "191",
+          "label": "PowerSploit sources"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "thefatrat",
+      "name": "TheFatRat sources",
+      "categories": [
+        "GitHub References"
+      ],
+      "bindings": [
+        {
+          "category": "GitHub References",
+          "name": "TheFatRat sources",
+          "command": "TheFatRat-source",
+          "kind": "gui",
+          "description": "Legacy setup not run on Ubuntu - browse sources"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "192",
+          "label": "TheFatRat sources"
+        },
+        {
+          "suite": "BCHackTool",
+          "source_id": "17",
+          "label": "TheFatRat"
+        },
+        {
+          "suite": "LScript",
+          "source_id": "thefatrat",
+          "label": "TheFatRat"
+        }
+      ],
+      "repositories": [
+        "https://github.com/Screetsec/TheFatRat"
+      ]
+    },
+    {
+      "id": "awesomehackersearchengines",
+      "name": "Hacker Search Engines",
+      "categories": [
+        "GitHub References"
+      ],
+      "bindings": [
+        {
+          "category": "GitHub References",
+          "name": "Hacker Search Engines",
+          "command": "awesome-hacker-search-engines-source",
+          "kind": "gui",
+          "description": "Browse search engine reference list"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "193",
+          "label": "Hacker Search Engines"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "shannon",
+      "name": "Shannon",
+      "categories": [
+        "Web & API",
+        "GitHub References"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "Shannon",
+          "command": "shannon",
+          "kind": "cli",
+          "description": "AI pentest CLI - configure your provider credentials separately"
+        },
+        {
+          "category": "GitHub References",
+          "name": "Shannon sources",
+          "command": "shannon-source",
+          "kind": "gui",
+          "description": "Browse Shannon source and documentation"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "194",
+          "label": "Shannon"
+        },
+        {
+          "suite": "pentest-menu",
+          "source_id": "198",
+          "label": "Shannon sources"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "sniper",
+      "name": "Sn1per container",
+      "categories": [
+        "Web & API",
+        "GitHub References"
+      ],
+      "bindings": [
+        {
+          "category": "Web & API",
+          "name": "Sn1per container",
+          "command": "sniper",
+          "kind": "cli",
+          "description": "Run installed Sn1per Docker image"
+        },
+        {
+          "category": "GitHub References",
+          "name": "Sn1per sources",
+          "command": "Sn1per-source",
+          "kind": "gui",
+          "description": "Browse Sn1per source and documentation"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "195",
+          "label": "Sn1per container"
+        },
+        {
+          "suite": "pentest-menu",
+          "source_id": "199",
+          "label": "Sn1per sources"
+        },
+        {
+          "suite": "LScript",
+          "source_id": "sniper",
+          "label": "sniper"
+        }
+      ],
+      "repositories": [
+        "https://github.com/1N3/Sn1per"
+      ]
+    },
+    {
+      "id": "safelinecompose",
+      "name": "SafeLine Compose",
+      "categories": [
+        "Defensive Services"
+      ],
+      "bindings": [
+        {
+          "category": "Defensive Services",
+          "name": "SafeLine Compose",
+          "command": "safeline-compose",
+          "kind": "cli",
+          "description": "Manage prepared SafeLine deployment with explicit compose arguments"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "196",
+          "label": "SafeLine Compose"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "safelineui",
+      "name": "SafeLine Web UI",
+      "categories": [
+        "Defensive Services"
+      ],
+      "bindings": [
+        {
+          "category": "Defensive Services",
+          "name": "SafeLine Web UI",
+          "command": "safeline-ui",
+          "kind": "gui",
+          "description": "Open local SafeLine console after starting its containers"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "197",
+          "label": "SafeLine Web UI"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "safeline",
+      "name": "SafeLine sources",
+      "categories": [
+        "GitHub References"
+      ],
+      "bindings": [
+        {
+          "category": "GitHub References",
+          "name": "SafeLine sources",
+          "command": "SafeLine-source",
+          "kind": "gui",
+          "description": "Browse SafeLine source and documentation"
+        }
+      ],
+      "sources": [
+        {
+          "suite": "pentest-menu",
+          "source_id": "200",
+          "label": "SafeLine sources"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "inshackle",
+      "name": "Inshackle",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "BCHackTool",
+          "source_id": "1",
+          "label": "Inshackle"
+        }
+      ],
+      "repositories": [
+        "https://github.com/Sanju8943/inshackle"
+      ]
+    },
+    {
+      "id": "kickthemout",
+      "name": "Kickthemout",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "BCHackTool",
+          "source_id": "2",
+          "label": "Kickthemout"
+        },
+        {
+          "suite": "LScript",
+          "source_id": "kickthemout",
+          "label": "kickthemout"
+        }
+      ],
+      "repositories": [
+        "https://github.com/k4m4/kickthemout"
+      ]
+    },
+    {
+      "id": "torghost",
+      "name": "Torghost",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "BCHackTool",
+          "source_id": "3",
+          "label": "Torghost"
+        }
+      ],
+      "repositories": [
+        "https://github.com/SusmithKrishnan/torghost"
+      ]
+    },
+    {
+      "id": "hiddeneye",
+      "name": "HiddenEye",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "BCHackTool",
+          "source_id": "4",
+          "label": "HiddenEye"
+        }
+      ],
+      "repositories": [
+        "https://github.com/DarkSecDevelopers/HiddenEye"
+      ]
+    },
+    {
+      "id": "bychanddos",
+      "name": "ByChan-Ddos",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "BCHackTool",
+          "source_id": "5",
+          "label": "ByChan-Ddos"
+        }
+      ],
+      "repositories": [
+        "https://github.com/ByCh4n/Ddos-Attack-ByChan"
+      ]
+    },
+    {
+      "id": "userrecon",
+      "name": "UserRecon (original integration)",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "BCHackTool",
+          "source_id": "6",
+          "label": "UserRecon (original integration)"
+        }
+      ],
+      "repositories": [
+        "https://github.com/issamelferkh/userrecon"
+      ]
+    },
+    {
+      "id": "seeker",
+      "name": "Seeker",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "BCHackTool",
+          "source_id": "7",
+          "label": "Seeker"
+        }
+      ],
+      "repositories": [
+        "https://github.com/thewhiteh4t/seeker"
+      ]
+    },
+    {
+      "id": "instashell",
+      "name": "Instashell",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "BCHackTool",
+          "source_id": "8",
+          "label": "Instashell"
+        }
+      ],
+      "repositories": [
+        "https://github.com/OffXec/instashell"
+      ]
+    },
+    {
+      "id": "bluforcefb",
+      "name": "BluForce-FB",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "BCHackTool",
+          "source_id": "9",
+          "label": "BluForce-FB"
+        }
+      ],
+      "repositories": [
+        "https://github.com/AngelSecurityTeam/BluForce-FB"
+      ]
+    },
+    {
+      "id": "cupp",
+      "name": "CUPP",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "BCHackTool",
+          "source_id": "10",
+          "label": "CUPP"
+        },
+        {
+          "suite": "LScript",
+          "source_id": "cupp",
+          "label": "CUPP"
+        }
+      ],
+      "repositories": [
+        "https://github.com/Mebus/cupp"
+      ]
+    },
+    {
+      "id": "spamwa",
+      "name": "SpamWa",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "BCHackTool",
+          "source_id": "11",
+          "label": "SpamWa"
+        }
+      ],
+      "repositories": [
+        "https://github.com/sandiwijayani1/SpamWa"
+      ]
+    },
+    {
+      "id": "rarzipcrack",
+      "name": "Rar-Zip-Crack",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "BCHackTool",
+          "source_id": "12",
+          "label": "Rar-Zip-Crack"
+        }
+      ],
+      "repositories": [
+        "https://github.com/ByCh4n/Rar-Zip-Crack"
+      ]
+    },
+    {
+      "id": "iptracer",
+      "name": "IP-Tracer",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "BCHackTool",
+          "source_id": "13",
+          "label": "IP-Tracer"
+        }
+      ],
+      "repositories": [
+        "https://github.com/rajkumardusad/IP-Tracer"
+      ]
+    },
+    {
+      "id": "osif",
+      "name": "OSIF",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "BCHackTool",
+          "source_id": "14",
+          "label": "OSIF"
+        }
+      ],
+      "repositories": [
+        "https://github.com/CiKu370/OSIF"
+      ]
+    },
+    {
+      "id": "bruter19",
+      "name": "Bruter19",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "BCHackTool",
+          "source_id": "15",
+          "label": "Bruter19"
+        }
+      ],
+      "repositories": [
+        "https://github.com/AzizKpln/Bruter19"
+      ]
+    },
+    {
+      "id": "camhackers",
+      "name": "CamHackers",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "BCHackTool",
+          "source_id": "16",
+          "label": "CamHackers"
+        }
+      ],
+      "repositories": [
+        "https://github.com/AngelSecurityTeam/Cam-Hackers"
+      ]
+    },
+    {
+      "id": "requiredchan",
+      "name": "RequiredChan",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "BCHackTool",
+          "source_id": "19",
+          "label": "RequiredChan"
+        }
+      ],
+      "repositories": [
+        "https://github.com/ByCh4n/RequiredChan"
+      ]
+    },
+    {
+      "id": "redhawk",
+      "name": "RED_HAWK",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "BCHackTool",
+          "source_id": "20",
+          "label": "RED_HAWK"
+        },
+        {
+          "suite": "LScript",
+          "source_id": "redhawk",
+          "label": "RED_HAWK"
+        }
+      ],
+      "repositories": [
+        "https://github.com/Tuhinshubhra/RED_HAWK"
+      ]
+    },
+    {
+      "id": "ghost",
+      "name": "Ghost",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "BCHackTool",
+          "source_id": "21",
+          "label": "Ghost"
+        }
+      ],
+      "repositories": [
+        "https://github.com/entynetproject/ghost"
+      ]
+    },
+    {
+      "id": "fluxion",
+      "name": "fluxion",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "fluxion",
+          "label": "fluxion"
+        }
+      ],
+      "repositories": [
+        "https://github.com/FluxionNetwork/fluxion"
+      ]
+    },
+    {
+      "id": "sniffer",
+      "name": "sniffer",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "sniffer",
+          "label": "sniffer"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "morpheus",
+      "name": "morpheus",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "morpheus",
+          "label": "morpheus"
+        }
+      ],
+      "repositories": [
+        "https://github.com/r00t-3xp10it/morpheus"
+      ]
+    },
+    {
+      "id": "osrframework",
+      "name": "osrframework",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "osrframework",
+          "label": "osrframework"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "hakku",
+      "name": "hakku",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "hakku",
+          "label": "hakku"
+        }
+      ],
+      "repositories": [
+        "https://github.com/4shadoww/hakkuframework"
+      ]
+    },
+    {
+      "id": "trity",
+      "name": "trity",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "trity",
+          "label": "trity"
+        }
+      ],
+      "repositories": [
+        "https://github.com/toxic-ig/Trity"
+      ]
+    },
+    {
+      "id": "dracnmap",
+      "name": "dracnmap",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "dracnmap",
+          "label": "dracnmap"
+        }
+      ],
+      "repositories": [
+        "https://github.com/Screetsec/Dracnmap"
+      ]
+    },
+    {
+      "id": "fernwificracker",
+      "name": "fern",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "fern",
+          "label": "fern"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "ghostphisher",
+      "name": "ghostphisher",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "ghostphisher",
+          "label": "ghostphisher"
+        }
+      ],
+      "repositories": [
+        "https://github.com/savio-code/ghost-phisher"
+      ]
+    },
+    {
+      "id": "theeye",
+      "name": "theeye",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "theeye",
+          "label": "theeye"
+        }
+      ],
+      "repositories": [
+        "https://github.com/EgeBalci/The-Eye"
+      ]
+    },
+    {
+      "id": "xerxes",
+      "name": "xerxes",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "xerxes",
+          "label": "xerxes"
+        }
+      ],
+      "repositories": [
+        "https://github.com/zanyarjamal/xerxes"
+      ]
+    },
+    {
+      "id": "mdk3",
+      "name": "mdk3",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "mdk3",
+          "label": "mdk3"
+        }
+      ],
+      "repositories": [
+        "https://github.com/wi-fi-analyzer/mdk3-master"
+      ]
+    },
+    {
+      "id": "katanaframework",
+      "name": "Katana Framework (LScript)",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "katana",
+          "label": "Katana Framework (LScript)"
+        }
+      ],
+      "repositories": [
+        "https://github.com/PowerScript/KatanaFramework"
+      ]
+    },
+    {
+      "id": "4nonimizer",
+      "name": "4nonimizer",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "4nonimizer",
+          "label": "4nonimizer"
+        }
+      ],
+      "repositories": [
+        "https://github.com/Hackplayers/4nonimizer"
+      ]
+    },
+    {
+      "id": "beelogger",
+      "name": "beelogger",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "beelogger",
+          "label": "beelogger"
+        }
+      ],
+      "repositories": [
+        "https://github.com/4w4k3/BeeLogger"
+      ]
+    },
+    {
+      "id": "ezsploit",
+      "name": "ezsploit",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "ezsploit",
+          "label": "ezsploit"
+        }
+      ],
+      "repositories": [
+        "https://github.com/rand0m1ze/ezsploit"
+      ]
+    },
+    {
+      "id": "pupy",
+      "name": "pupy",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "pupy",
+          "label": "pupy"
+        }
+      ],
+      "repositories": [
+        "https://github.com/n1nj4sec/pupy"
+      ]
+    },
+    {
+      "id": "zirikatu",
+      "name": "zirikatu",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "zirikatu",
+          "label": "zirikatu"
+        }
+      ],
+      "repositories": [
+        "https://github.com/pasahitz/zirikatu"
+      ]
+    },
+    {
+      "id": "wifiautopwner",
+      "name": "wifiautopwner",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "wifiautopwner",
+          "label": "wifiautopwner"
+        }
+      ],
+      "repositories": [
+        "https://github.com/Mi-Al/WiFi-autopwner"
+      ]
+    },
+    {
+      "id": "anonsurf",
+      "name": "anonsurf",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "anonsurf",
+          "label": "anonsurf"
+        }
+      ],
+      "repositories": [
+        "https://github.com/Und3rf10w/kali-anonsurf"
+      ]
+    },
+    {
+      "id": "anonym8",
+      "name": "anonym8",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "anonym8",
+          "label": "anonym8"
+        }
+      ],
+      "repositories": [
+        "https://github.com/HiroshiManRise/anonym8"
+      ]
+    },
+    {
+      "id": "ipscan",
+      "name": "angryip",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "angryip",
+          "label": "angryip"
+        }
+      ],
+      "repositories": [
+        "https://github.com/angryip/ipscan"
+      ]
+    },
+    {
+      "id": "recondog",
+      "name": "recondog",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "recondog",
+          "label": "recondog"
+        }
+      ],
+      "repositories": [
+        "https://github.com/UltimateHackers/ReconDog"
+      ]
+    },
+    {
+      "id": "winpayloads",
+      "name": "winpayloads",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "winpayloads",
+          "label": "winpayloads"
+        }
+      ],
+      "repositories": [
+        "https://github.com/nccgroup/Winpayloads"
+      ]
+    },
+    {
+      "id": "chaos",
+      "name": "chaos",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "chaos",
+          "label": "chaos"
+        }
+      ],
+      "repositories": [
+        "https://github.com/tiagorlampert/CHAOS"
+      ]
+    },
+    {
+      "id": "infoga",
+      "name": "infoga",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "infoga",
+          "label": "infoga"
+        }
+      ],
+      "repositories": [
+        "https://github.com/m4ll0k/Infoga"
+      ]
+    },
+    {
+      "id": "nwatch",
+      "name": "nwatch",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "nwatch",
+          "label": "nwatch"
+        }
+      ],
+      "repositories": [
+        "https://github.com/suraj-root/nWatch"
+      ]
+    },
+    {
+      "id": "eaphammer",
+      "name": "eaphammer",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "eaphammer",
+          "label": "eaphammer"
+        }
+      ],
+      "repositories": [
+        "https://github.com/s0lst1c3/eaphammer"
+      ]
+    },
+    {
+      "id": "dagon",
+      "name": "dagon",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "dagon",
+          "label": "dagon"
+        }
+      ],
+      "repositories": [
+        "https://github.com/ekultek/dagon"
+      ]
+    },
+    {
+      "id": "lalin",
+      "name": "lalin",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "lalin",
+          "label": "lalin"
+        }
+      ],
+      "repositories": [
+        "https://github.com/Screetsec/LALIN"
+      ]
+    },
+    {
+      "id": "knockmail",
+      "name": "knockmail",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "knockmail",
+          "label": "knockmail"
+        }
+      ],
+      "repositories": [
+        "https://github.com/4w4k3/KnockMail"
+      ]
+    },
+    {
+      "id": "kwetza",
+      "name": "kwetza",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "kwetza",
+          "label": "kwetza"
+        }
+      ],
+      "repositories": [
+        "https://github.com/sensepost/kwetza"
+      ]
+    },
+    {
+      "id": "ngrok",
+      "name": "ngrok",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "ngrok",
+          "label": "ngrok"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "websploit",
+      "name": "websploit",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "websploit",
+          "label": "websploit"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "openvas",
+      "name": "openvas",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "openvas",
+          "label": "openvas"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "shellter",
+      "name": "shellter",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "shellter",
+          "label": "shellter"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "geany",
+      "name": "geany",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "geany",
+          "label": "geany"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "bleachbit",
+      "name": "bleachbit",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "bleachbit",
+          "label": "bleachbit"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "vmr",
+      "name": "vmr",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "vmr",
+          "label": "vmr"
+        }
+      ],
+      "repositories": [
+        "https://github.com/musket33/VMR-MDK-Kali2-Kali2016"
+      ]
+    },
+    {
+      "id": "hashbuster",
+      "name": "hashbuster",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "hashbuster",
+          "label": "hashbuster"
+        }
+      ],
+      "repositories": [
+        "https://github.com/UltimateHackers/Hash-Buster"
+      ]
+    },
+    {
+      "id": "findsploit",
+      "name": "findsploit",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "findsploit",
+          "label": "findsploit"
+        }
+      ],
+      "repositories": [
+        "https://github.com/1N3/Findsploit"
+      ]
+    },
+    {
+      "id": "howdoi",
+      "name": "howdoi",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "howdoi",
+          "label": "howdoi"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "operative",
+      "name": "operative",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "operative",
+          "label": "operative"
+        }
+      ],
+      "repositories": [
+        "https://github.com/graniet/operative-framework"
+      ]
+    },
+    {
+      "id": "netattack2",
+      "name": "netattack2",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "netattack2",
+          "label": "netattack2"
+        }
+      ],
+      "repositories": [
+        "https://github.com/chrizator/netattack2"
+      ]
+    },
+    {
+      "id": "koadic",
+      "name": "koadic",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "koadic",
+          "label": "koadic"
+        }
+      ],
+      "repositories": [
+        "https://github.com/zerosum0x0/koadic"
+      ]
+    },
+    {
+      "id": "empire",
+      "name": "empire",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "empire",
+          "label": "empire"
+        }
+      ],
+      "repositories": [
+        "https://github.com/EmpireProject/Empire"
+      ]
+    },
+    {
+      "id": "meterpreterparanoidmode",
+      "name": "meterpreter paranoid mode",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "meterpreter_paranoid_mode",
+          "label": "meterpreter paranoid mode"
+        }
+      ],
+      "repositories": [
+        "https://github.com/r00t-3xp10it/Meterpreter_Paranoid_Mode-SSL"
+      ]
+    },
+    {
+      "id": "dropitframework",
+      "name": "dropit frmw",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "dropit_frmw",
+          "label": "dropit frmw"
+        }
+      ],
+      "repositories": [
+        "https://github.com/D4Vinci/Dr0p1t-Framework"
+      ]
+    },
+    {
+      "id": "wifipumpkin",
+      "name": "wifi pumpkin",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "wifi_pumpkin",
+          "label": "wifi pumpkin"
+        }
+      ],
+      "repositories": [
+        "https://github.com/P0cL4bs/WiFi-Pumpkin"
+      ]
+    },
+    {
+      "id": "veil",
+      "name": "veil",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "veil",
+          "label": "veil"
+        }
+      ],
+      "repositories": [
+        "https://github.com/Veil-Framework/Veil"
+      ]
+    },
+    {
+      "id": "leviathan",
+      "name": "leviathan",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "leviathan",
+          "label": "leviathan"
+        }
+      ],
+      "repositories": [
+        "https://github.com/leviathan-framework/leviathan"
+      ]
+    },
+    {
+      "id": "fakeimageexploiter",
+      "name": "fake image",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "fake_image",
+          "label": "fake image"
+        }
+      ],
+      "repositories": [
+        "https://github.com/r00t-3xp10it/FakeImageExploiter"
+      ]
+    },
+    {
+      "id": "avet",
+      "name": "avet",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "avet",
+          "label": "avet"
+        }
+      ],
+      "repositories": [
+        "https://github.com/govolution/avet"
+      ]
+    },
+    {
+      "id": "gloom",
+      "name": "gloom",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "gloom",
+          "label": "gloom"
+        }
+      ],
+      "repositories": [
+        "https://github.com/StreetSec/Gloom-Framework"
+      ]
+    },
+    {
+      "id": "arcanus",
+      "name": "arcanus",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "arcanus",
+          "label": "arcanus"
+        }
+      ],
+      "repositories": [
+        "https://github.com/EgeBalci/ARCANUS"
+      ]
+    },
+    {
+      "id": "msfpc",
+      "name": "msfpc",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "msfpc",
+          "label": "msfpc"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "morphhta",
+      "name": "morphhta",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "morphhta",
+          "label": "morphhta"
+        }
+      ],
+      "repositories": [
+        "https://github.com/vysec/morphHTA"
+      ]
+    },
+    {
+      "id": "lfisuite",
+      "name": "lfi",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "lfi",
+          "label": "lfi"
+        }
+      ],
+      "repositories": [
+        "https://github.com/D35m0nd142/LFISuite"
+      ]
+    },
+    {
+      "id": "unibyav",
+      "name": "unibyav",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "unibyav",
+          "label": "unibyav"
+        }
+      ],
+      "repositories": [
+        "https://github.com/Mr-Un1k0d3r/UniByAv"
+      ]
+    },
+    {
+      "id": "demiguise",
+      "name": "demiguise",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "demiguise",
+          "label": "demiguise"
+        }
+      ],
+      "repositories": [
+        "https://github.com/nccgroup/demiguise"
+      ]
+    },
+    {
+      "id": "dkmc",
+      "name": "dkmc",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "dkmc",
+          "label": "dkmc"
+        }
+      ],
+      "repositories": [
+        "https://github.com/Mr-Un1k0d3r/DKMC"
+      ]
+    },
+    {
+      "id": "sechub",
+      "name": "sechub",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "sechub",
+          "label": "sechub"
+        }
+      ],
+      "repositories": [
+        "https://github.com/cys3c/secHub"
+      ]
+    },
+    {
+      "id": "beef",
+      "name": "BeEF",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "beef",
+          "label": "BeEF"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "mitmf",
+      "name": "mitmf",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "mitmf",
+          "label": "mitmf"
+        }
+      ],
+      "repositories": [
+        "https://github.com/byt3bl33d3r/MITMf"
+      ]
+    },
+    {
+      "id": "fsociety",
+      "name": "fsociety",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "fsociety",
+          "label": "fsociety"
+        }
+      ],
+      "repositories": [
+        "https://github.com/Manisso/fsociety"
+      ]
+    },
+    {
+      "id": "netool",
+      "name": "netool",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "netool",
+          "label": "netool"
+        }
+      ],
+      "repositories": [
+        "https://github.com/r00t-3xp10it/netool-toolkit"
+      ]
+    },
+    {
+      "id": "zeus",
+      "name": "zeus",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "zeus",
+          "label": "zeus"
+        }
+      ],
+      "repositories": [
+        "https://github.com/Ekultek/Zeus-Scanner"
+      ]
+    },
+    {
+      "id": "evildroid",
+      "name": "evil droid",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "evil_droid",
+          "label": "evil droid"
+        }
+      ],
+      "repositories": [
+        "https://github.com/M4sc3r4n0/Evil-Droid"
+      ]
+    },
+    {
+      "id": "nosqlmap",
+      "name": "nosqlmap",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "nosqlmap",
+          "label": "nosqlmap"
+        }
+      ],
+      "repositories": [
+        "https://github.com/codingo/NoSQLMap"
+      ]
+    },
+    {
+      "id": "eggshell",
+      "name": "eggshell",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "eggshell",
+          "label": "eggshell"
+        }
+      ],
+      "repositories": [
+        "https://github.com/neoneggplant/EggShell"
+      ]
+    },
+    {
+      "id": "zerodoor",
+      "name": "zerodoor",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "zerodoor",
+          "label": "zerodoor"
+        }
+      ],
+      "repositories": [
+        "https://github.com/Souhardya/Zerodoor"
+      ]
+    },
+    {
+      "id": "cromos",
+      "name": "cromos",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "cromos",
+          "label": "cromos"
+        }
+      ],
+      "repositories": [
+        "https://github.com/evilsocketbr/cromos"
+      ]
+    },
+    {
+      "id": "yukichan",
+      "name": "yuki-chan",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "yuki-chan",
+          "label": "yuki-chan"
+        }
+      ],
+      "repositories": [
+        "https://github.com/Yukinoshita47/Yuki-Chan-The-Auto-Pentest"
+      ]
+    },
+    {
+      "id": "socialfish",
+      "name": "socialfish",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "socialfish",
+          "label": "socialfish"
+        }
+      ],
+      "repositories": [
+        "https://github.com/UndeadSec/SocialFish"
+      ]
+    },
+    {
+      "id": "autosploit",
+      "name": "autosploit",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "autosploit",
+          "label": "autosploit"
+        }
+      ],
+      "repositories": [
+        "https://github.com/NullArray/AutoSploit"
+      ]
+    },
+    {
+      "id": "blazy",
+      "name": "blazy",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "blazy",
+          "label": "blazy"
+        }
+      ],
+      "repositories": [
+        "https://github.com/UltimateHackers/Blazy"
+      ]
+    },
+    {
+      "id": "striker",
+      "name": "striker",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "striker",
+          "label": "striker"
+        }
+      ],
+      "repositories": [
+        "https://github.com/UltimateHackers/Striker"
+      ]
+    },
+    {
+      "id": "hyprpulse",
+      "name": "hyprpulse",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "hyprpulse",
+          "label": "hyprpulse"
+        }
+      ],
+      "repositories": [
+        "https://github.com/Ethical-H4CK3R/hyprPulse"
+      ]
+    },
+    {
+      "id": "instaburst",
+      "name": "instaburst",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "instaburst",
+          "label": "instaburst"
+        }
+      ],
+      "repositories": [
+        "https://github.com/Ethical-H4CK3R/InstaBurst"
+      ]
+    },
+    {
+      "id": "instagrampy",
+      "name": "instagram-py",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "instagram-py",
+          "label": "instagram-py"
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "id": "datasploit",
+      "name": "datasploit",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "datasploit",
+          "label": "datasploit"
+        }
+      ],
+      "repositories": [
+        "https://github.com/DataSploit/datasploit"
+      ]
+    },
+    {
+      "id": "sitebroker",
+      "name": "sitebroker",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "sitebroker",
+          "label": "sitebroker"
+        }
+      ],
+      "repositories": [
+        "https://github.com/Anon-Exploiter/SiteBroker"
+      ]
+    },
+    {
+      "id": "enigma",
+      "name": "enigma",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "enigma",
+          "label": "enigma"
+        }
+      ],
+      "repositories": [
+        "https://github.com/UndeadSec/Enigma"
+      ]
+    },
+    {
+      "id": "zatacker",
+      "name": "zatacker",
+      "categories": [],
+      "bindings": [],
+      "sources": [
+        {
+          "suite": "LScript",
+          "source_id": "zatacker",
+          "label": "zatacker"
+        }
+      ],
+      "repositories": []
+    }
+  ],
+  "counts": {
+    "pentest-menu": 200,
+    "BCHackTool": 21,
+    "LScript": 100,
+    "unique_tools": 296
+  },
+  "inputs": {
+    "pentest_menu_sha256": "732e21ddb2a3070592c0c87dd179fe00a7c290a387a32a1f615ab69e76286db4",
+    "bchacktool_sha256": "d2a950632bab00ceef58955961d820242752e23e2fbcef4f052e340877434746",
+    "lscript_sha256": "33aae91c3ef42cb31d319dadbb7c934f511c771dade81ffb52f8649a5aa14374"
+  }
+}

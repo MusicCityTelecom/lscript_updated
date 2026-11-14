@@ -45,3 +45,11 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Maintained toolkit runtime/artifacts
+__pycache__/
+*.pyc
+.venv/
+.env
+github-auth.seed.json
+*.bundle
